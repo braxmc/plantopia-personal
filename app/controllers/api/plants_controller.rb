@@ -12,11 +12,8 @@ class Api::PlantsController < ApplicationController
   def create
     plant = @room.plants.new(name: params[:name], species: params[:species], colors: params[:colors])
 
-    # plant.name = params[:name] ? params[:name] : plant.name
-    # plant.species = params[:species] ? params[:species] : plant.species
-    # plant.colors = params[:colors] ? params[:colors] : plant.colors
-
     file = params[:file]
+    
     if file != ''
       begin
         ext = File.extname(file.tempfile)

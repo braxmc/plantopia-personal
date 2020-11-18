@@ -37,13 +37,6 @@ const RoomProvider = ({children}) => {
     axios.put(`/api/rooms/${id}`, {room})
     .then( res => {
       setRoom(res.data)
-    //   const updatedRooms = rooms.map( r => {
-    //     if (r.id === id) {
-    //       return res.data
-    //     }
-    //     return r
-    //   })
-    //   setRooms(updatedRooms)
     })
     .catch(err => console.log(err))
   }

@@ -1,7 +1,10 @@
 import React, {useState, useEffect} from 'react';
+
 import {AuthConsumer} from '../../providers/AuthProvider'
+
 import Dropzone from 'react-dropzone'
-import '../../styles/Profile.css'
+
+import { Button } from '../../styles/ProfileStyle'
 
 const defaultImage = 'https://d30y9cdsu7xlg0.cloudfront.net/png/15724-200.png';
 
@@ -112,7 +115,7 @@ const Profile = (props) => {
           required
           onChange={handleEmailChange}
         />
-        <button type='submit'>update</button>
+        <Button type='submit'>update</Button>
       </form>
     )
   }
@@ -122,9 +125,9 @@ const Profile = (props) => {
   return (
     <>
       {toggleEdit ? editView() : profileView()}
-  <button className='profile-button' onClick={() => setToggleEdit(!toggleEdit)}>
+  <Button className='profile-button' onClick={() => setToggleEdit(!toggleEdit)}>
     {toggleEdit ? 'Exit' : 'Edit'}
-  </button>
+  </Button>
     </>
   )
 }
