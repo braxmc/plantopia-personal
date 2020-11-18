@@ -4,7 +4,7 @@ import {AuthConsumer} from '../../providers/AuthProvider'
 
 import Dropzone from 'react-dropzone'
 
-import { Button } from '../../styles/ProfileStyle'
+import { UserWrap, ButtonWrap, Button, Name, ImgWrap, Img } from '../../styles/ProfileStyle'
 
 const defaultImage = 'https://d30y9cdsu7xlg0.cloudfront.net/png/15724-200.png';
 
@@ -57,14 +57,14 @@ const Profile = (props) => {
   const profileView = () => {
     const {auth: { user }, } = props;
     return (
-      <>
-        <img src={user.image || 'https://d30y9cdsu7xlg0.cloudfront.net/png/15724-200.png'} />
-        <h1>
-          {props.auth.user.first_name} 
-          <br />
-          {props.auth.user.last_name}
-        </h1>
-      </>
+      <UserWrap>
+        <ImgWrap>
+          <Img src={user.image || 'https://d30y9cdsu7xlg0.cloudfront.net/png/15724-200.png'} />
+        </ImgWrap>
+        <Name>
+          {props.auth.user.first_name}, {props.auth.user.last_name}
+        </Name>
+      </UserWrap>
     )
   }
 
@@ -123,12 +123,12 @@ const Profile = (props) => {
 
 
   return (
-    <>
+    <ButtonWrap>
       {toggleEdit ? editView() : profileView()}
   <Button className='profile-button' onClick={() => setToggleEdit(!toggleEdit)}>
     {toggleEdit ? 'Exit' : 'Edit'}
   </Button>
-    </>
+    </ButtonWrap>
   )
 }
 
