@@ -13,9 +13,26 @@ export const Button = styled.button`
   width: 8em;
   margin-left: 10px;
   margin-top: 10px;
-  
+
  &:hover {
   color: ${props => props.primary ? "white" : "#274428"};
   background: ${props => props.primary ? "#274428" : "white"};
  }
 `;
+
+export const RoomDiv = styled.div`
+  background-color: #274428;
+  color: white;
+  width: 20vw;
+  height: 100px;
+  border-radius: 10px;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+`
+
+export const RoomInfo = styled.p`
+  padding: 5px;
+
+`
