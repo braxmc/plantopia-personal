@@ -35,9 +35,7 @@ const RoomForm = (props) => {
       props.toggle()
     }
   }
-
-  
-
+ 
   return (
     <Wrapper>
       <Form onSubmit={handleSubmit}>

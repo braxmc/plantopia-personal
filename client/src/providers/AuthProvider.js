@@ -9,11 +9,10 @@ class AuthProvider extends Component {
   state = { user: null }
 
   handleRegister = (user, history) => {
-
     axios.post('/api/auth', user)
       .then( res => {
         this.setState({ user: res.data.data })
-        history.push('/')
+        history.push('/profile')
       })
       .catch( err => console.log(err))
   }

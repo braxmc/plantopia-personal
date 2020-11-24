@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import axios from "axios";
+
 import { RoomConsumer } from '../../providers/RoomProvider';
 import RoomForm from './RoomForm'
 import Room from  './Room';
-import '../../styles/Room.css';
-import  {Header} from '../../styles/SharedElements'
+
+import  { Header } from '../../styles/SharedElements'
+import { Button } from '../../styles/RoomStyles'
 
 
 const Rooms = (props) => {
@@ -29,8 +30,10 @@ const Rooms = (props) => {
   // if(!props.rooms) return null
   return (
     <>
-    <div className = "toprow">
-      <button onClick={() => setToggleForm(!toggleForm)}>{toggleForm ? <div className='closeForm'>⍇</div>: <div className = 'openForm'>＋</div>}</button>
+    <div>
+      <Button onClick={() => setToggleForm(!toggleForm)}>
+        {toggleForm ? <div>Exit</div> : <div>Add Room</div>}
+      </Button>
       {toggleForm ? <RoomForm addRoom={props.addRoom} toggle={setToggleForm} /> : ''}
      <div>
      <Header>Your Rooms</Header>
