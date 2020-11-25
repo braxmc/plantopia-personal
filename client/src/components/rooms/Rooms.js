@@ -4,8 +4,7 @@ import { RoomConsumer } from '../../providers/RoomProvider';
 import RoomForm from './RoomForm'
 import Room from  './Room';
 
-import  { Header } from '../../styles/SharedElements'
-import { Button } from '../../styles/RoomStyles'
+import { Button, RoomList, Header, Center } from '../../styles/RoomStyles'
 
 
 const Rooms = (props) => {
@@ -18,27 +17,25 @@ const Rooms = (props) => {
   const listRooms = () => {
     if (props.rooms.length !== 0) {
       return (
-        <div className = "roomcont">
+        <RoomList>
             { props.rooms.map( r =>
           <Room {...r} />
               )}
-        </div>
+        </RoomList>
       )
-    } else {
     }
   }
   // if(!props.rooms) return null
   return (
     <>
     <div>
-      <Button onClick={() => setToggleForm(!toggleForm)}>
-        {toggleForm ? <div>Exit</div> : <div>Add Room</div>}
-      </Button>
+      <Header>Your Rooms</Header>
+      <Center>
+        <Button onClick={() => setToggleForm(!toggleForm)}>
+          {toggleForm ? <div>Exit</div> : <div>Add Room</div>}
+        </Button>
+      </Center>
       {toggleForm ? <RoomForm addRoom={props.addRoom} toggle={setToggleForm} /> : ''}
-     <div>
-     <Header>Your Rooms</Header>
-     </div>
-      <div>Number of Rooms: {props.rooms.length}</div>
     </div>
       {listRooms()}
       
