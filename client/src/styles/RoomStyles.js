@@ -21,6 +21,7 @@ export const Button = styled.button`
   height: 2em;
   width: 8em;
   margin-top: 10px;
+  margin-bottom: 10px;
 
  &:hover {
   color: ${props => props.primary ? "white" : "#274428"};
@@ -59,10 +60,16 @@ export const RoomList = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 30px;
 `
 export const Center = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 30px;
+`
+
+export const Hr = styled.hr`
+  height: 2px;
+  color: #274428;
+  background-color: #274428;
 `
