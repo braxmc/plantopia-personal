@@ -3,7 +3,7 @@ import { RoomConsumer } from '../../providers/RoomProvider';
 import RoomForm from './RoomForm';
 import Plants from '../plants/Plants';
 
-import { } from '../../styles/RoomShowElements'
+import { Button, Header } from '../../styles/RoomShowElements'
 
 
 const RoomShow = (props) => {
@@ -32,13 +32,12 @@ const RoomShow = (props) => {
       <div>
         {toggleEdit ? editView() : 
         <>
-          <p>{props.room.name}</p>
-          <p>{props.room.sun_amount}</p>
+          <Header>{props.room.name}</Header>
         </>
         }
         <div className = "plantRoomButtons">
-        <button onClick={() => setToggleEdit(!toggleEdit)}>{toggleEdit ? 'Close Room' : 'Edit Room'}</button>
-        <button onClick={() => props.deleteRoom(props.room.id)}>Delete</button>
+        <Button onClick={() => setToggleEdit(!toggleEdit)}>{toggleEdit ? 'Close Room' : 'Edit Room'}</Button>
+        <Button onClick={() => props.deleteRoom(props.room.id)}>Delete</Button>
         </div>
         </div>
           {/* <h1>Your Plants</h1> */}

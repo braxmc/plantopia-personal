@@ -4,6 +4,8 @@ import { PlantConsumer } from '../../providers/PlantProvider';
 import PlantForm from './PlantForm';
 import Plant from './Plant'
 
+import { Button } from '../../styles/PlantsStyles'
+
 
 
 const Plants = (props) => {
@@ -30,7 +32,7 @@ const Plants = (props) => {
   return (
     <>
     <div className='plantpicture'>
-      <button onClick={() => setToggleForm(!toggleForm)}>{toggleForm ? <div className='plantsExit'>Exit</div> : <div className='plantsPicture'>Add Plant</div>}</button>
+      <Button onClick={() => setToggleForm(!toggleForm)}>{toggleForm ? 'Exit' : 'Add Plant'}</Button>
     </div>
       {
         toggleForm ? 
