@@ -2,8 +2,9 @@ import React, {useEffect, useState} from 'react'
 import { RoomConsumer } from '../../providers/RoomProvider';
 import RoomForm from './RoomForm';
 import Plants from '../plants/Plants';
-import plantsstyled from '../../styles/PlantsStyles'
-import '../../styles/Plants.css';
+
+import { } from '../../styles/RoomShowElements'
+
 
 const RoomShow = (props) => {
   const [toggleEdit, setToggleEdit] = useState(false)
@@ -27,12 +28,12 @@ const RoomShow = (props) => {
 
   if (!props.room) return null
     return (
-      <div className = 'plantall'>
-      <div className='showroom'>
+      <div>
+      <div>
         {toggleEdit ? editView() : 
         <>
-          <p>{props.room.sun_amount}</p>
           <p>{props.room.name}</p>
+          <p>{props.room.sun_amount}</p>
         </>
         }
         <div className = "plantRoomButtons">
@@ -42,7 +43,7 @@ const RoomShow = (props) => {
         </div>
           {/* <h1>Your Plants</h1> */}
         <div className='plantsstyles'>
-          <plants><Plants room_id={props.room.id} /></plants>
+          <Plants room_id={props.room.id} />
       </div>
       </div>
     )

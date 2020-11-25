@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
+
 import { PlantConsumer } from '../../providers/PlantProvider';
 import PlantForm from './PlantForm';
 import Plant from './Plant'
-import plantsstyled from '../../styles/PlantsStyles'
-import '../../styles/Plants.css';
+
+
 
 const Plants = (props) => {
   const [toggleForm, setToggleForm] = useState(false)
@@ -11,7 +12,7 @@ const Plants = (props) => {
 
   useEffect(() => {
     props.getPlants(props.room_id)
-  }, [])
+  }, [props.room_id])
 
   const listPlants = () => {
     if (props.plants.length !== 0) {
