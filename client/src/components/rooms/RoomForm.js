@@ -29,10 +29,10 @@ const RoomForm = (props) => {
     e.preventDefault();
     if (props.room) {
       props.updateRoom(props.room.id, {name: roomName, sun_amount: sunAmount, user_id: props.user.id})
-      props.toggleEdit()
+      props.toggleEdit(false)
     } else {
       props.addRoom({name: roomName, sun_amount: sunAmount, user_id: props.user.id})
-      props.toggle()
+      props.toggle(false)
     }
   }
  
