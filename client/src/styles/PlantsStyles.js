@@ -25,13 +25,13 @@ export const PlantWrap = styled.div`
   font-weight: bold;
   background-color: #EBEBEB;
   color: #274428;
-  width: 300px;
+  width: 350px;
   height: 200px;
   border-radius: 10px;
   border: 2px solid #274428;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin: 10px;
 
@@ -47,16 +47,18 @@ export const PlantInfo = styled.p`
 export const Img = styled.img`
   height: 150px;
   width: 150px;
+  border-radius: 10px;
 `
 
 export const Left = styled.div`
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  padding-right: 40px;
+  padding-left: 10px;
 `
 
 export const Right = styled.div`
   display: flex;
-  justify-content: flex-end'
+  justify-content: flex-end;
+  padding-right: 10px;
 `

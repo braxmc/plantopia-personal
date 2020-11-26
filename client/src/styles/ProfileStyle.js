@@ -5,6 +5,8 @@ export const UserWrap = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   width: 25vw;
+  max-width: 350px;
+  min-width: 200px;
   background: #EBEBEB;
 `
 
@@ -16,10 +18,16 @@ export const Name = styled.p`
   color: #274428;
   font-size: 30px;
   padding-bottom: 10px;
+
+  @media screen and (max-width: 1050px) {
+    font-size: 20px;
+  }
 `
 
 export const ButtonWrap = styled.div`
   width: 25vw;
+  max-width: 350px;
+  min-width: 200px;
   background: #EBEBEB;
   height: 100vh;
   display: flex;
@@ -39,6 +47,7 @@ export const Button = styled.button`
   height: 2em;
   width: 7em;
   margin-left: 10px;
+
  &:hover {
   color: ${props => props.primary ? "white" : "#274428"};
   background: ${props => props.primary ? "#274428" : "white"};
@@ -51,21 +60,15 @@ export const ImgWrap = styled.div`
 `
 
 export const Img = styled.img`
-  padding-top: 10px;
   border: 2px solid #000;
   border-radius: 50%;
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 10px;
   width: 250px;
+
+  @media screen and (max-width: 1050px) {
+    width: 150px;
+  }
 `
 
-
-
-
-// font-family: 'Noto Sans TC', sans-serif;
-// text-decoration: none;
-// display: flex;
-// flex-direction: row;
-// text-align: center;
-// justify-content: center;
