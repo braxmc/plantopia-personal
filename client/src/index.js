@@ -22,7 +22,7 @@ ReactDOM.render(
           <SpecProvider>
             <RoutineProvider>
               <BrowserRouter>
-              <App />
+                <App />
               </BrowserRouter>
             </RoutineProvider>
           </SpecProvider>

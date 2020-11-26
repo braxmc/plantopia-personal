@@ -8,7 +8,7 @@ import { Modal } from 'semantic-ui-react'
 
 import { Button } from '../../styles/SharedElements';
 
-import { PlantWrap, PlantInfo, InfoWrap, Info, Image, ButtonWrap, InfoTitle, RightWrap, LeftWrap, Line, InfoTitle1, Info1, Line1 } from '../../styles/PlantPageElements';
+import { PlantWrap, PlantInfo, Info, Image, ButtonWrap, InfoTitle, RightWrap, LeftWrap, Line, InfoTitle1, Info1, Line1 } from '../../styles/PlantPageElements';
 
 const PlantPage = (props) => {
   const [toggleEdit, setToggleEdit] = useState(false)
@@ -20,7 +20,7 @@ const PlantPage = (props) => {
     props.getPlant(props.location.state.room_id, props.match.params.id)
   }, [])
 
-  const editView = () => {
+  const editView = (props) => {
     return (
       <>
         <PlantForm 
