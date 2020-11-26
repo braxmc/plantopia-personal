@@ -4,7 +4,7 @@ import { PlantConsumer } from '../../providers/PlantProvider';
 import PlantForm from './PlantForm';
 import Plant from './Plant'
 
-import { Button } from '../../styles/PlantsStyles'
+import { Button, Row, Center } from '../../styles/PlantsStyles'
 
 
 
@@ -19,11 +19,11 @@ const Plants = (props) => {
   const listPlants = () => {
     if (props.plants.length !== 0) {
       return (
-        <div>
+        <Row>
           { props.plants.map( p =>
             <Plant {...p} />
           )}
-        </div>
+        </Row>
       )
     } else {
     }
@@ -31,9 +31,9 @@ const Plants = (props) => {
   // if(!props.rooms) return null
   return (
     <>
-    <div className='plantpicture'>
+    <Center>
       <Button onClick={() => setToggleForm(!toggleForm)}>{toggleForm ? 'Exit' : 'Add Plant'}</Button>
-    </div>
+    </Center>
       {
         toggleForm ? 
         <PlantForm addPlant={ props.addPlant} room_id={props.room_id} toggleForm={setToggleForm} />

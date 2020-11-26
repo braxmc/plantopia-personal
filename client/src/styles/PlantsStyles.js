@@ -11,7 +11,6 @@ export const Button = styled.button`
   border-radius: 10px;
   height: 2em;
   width: 8em;
-  margin-top: 10px;
   margin-bottom: 10px;
 
  &:hover {
@@ -61,4 +60,17 @@ export const Right = styled.div`
   display: flex;
   justify-content: flex-end;
   padding-right: 10px;
+`
+
+export const Row = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 15px;
+`
+
+export const Center = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 `
