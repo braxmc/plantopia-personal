@@ -66,9 +66,36 @@ export const Img = styled.img`
   margin-right: 10px;
   margin-top: 10px;
   width: 250px;
+  height: 250px;
 
   @media screen and (max-width: 1050px) {
     width: 150px;
+    height: 150px;
   }
 `
 
+export const Center = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 10px;
+`
+
+export const Header = styled.div`
+  font-family: 'Noto Sans TC', sans-serif;
+  display: flex;
+  justify-content: center;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #274428;
+  font-size: 30px;
+  padding: 15px 0;
+  background-color: #EBEBEB;
+`
+
+export const Hr = styled.hr`
+  height: 2px;
+  color: #274428;
+  background-color: #274428;
+  margin: 0;
+  padding: 0;
+`

@@ -6,7 +6,9 @@ import Room from  './Room';
 
 import { Modal } from 'semantic-ui-react'
 
-import { Button, RoomList, Header, Center, Hr } from '../../styles/RoomStyles'
+import { Button, RoomList, Header, Center, Hr, FormHeader, FormHr } from '../../styles/RoomStyles'
+import { Gray } from '../../styles/RoomShowElements'
+
 
 
 const Rooms = (props) => {
@@ -33,7 +35,7 @@ const Rooms = (props) => {
   // if(!props.rooms) return null
   return (
     <>
-      <div>
+      <Gray>
         <Header>Your Rooms</Header>
         <Center>
           <Modal
@@ -42,14 +44,15 @@ const Rooms = (props) => {
             open={toggleForm}
             onClose={setClose}
           >
-            <Modal.Header>Add Plant</Modal.Header>
+            <FormHeader>Add Plant</FormHeader>
+            <FormHr />
             <Modal.Content>
               <RoomForm addRoom={props.addRoom} toggle={setToggleForm} />
             </Modal.Content>
           </Modal>
         </Center>
         <Hr />
-      </div>
+      </Gray>
         {listRooms()}
     </>
   )

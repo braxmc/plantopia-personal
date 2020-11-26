@@ -4,7 +4,9 @@ import {AuthConsumer} from '../../providers/AuthProvider'
 
 import Dropzone from 'react-dropzone'
 
-import { UserWrap, ButtonWrap, Button, Name, ImgWrap, Img } from '../../styles/ProfileStyle'
+import { UserWrap, ButtonWrap, Button, Name, ImgWrap, Img, Center, Header, Hr } from '../../styles/ProfileStyle'
+import { Modal } from 'semantic-ui-react';
+import { Wrapper, Form, FormInput } from '../../styles/RoomFormStyles'
 
 const defaultImage = 'https://d30y9cdsu7xlg0.cloudfront.net/png/15724-200.png';
 
@@ -15,6 +17,8 @@ const Profile = (props) => {
   const [file, setFile] = useState('')
 
   const [toggleEdit, setToggleEdit] = useState(false)
+
+  const [close, setClose] = useState(false)
 
   useEffect(() => {
     const { auth: { user: { first_name, last_name, email, }, }, } = props;
@@ -72,51 +76,57 @@ const Profile = (props) => {
     const {auth: { user } } = props;
     
     return (
-      <form onSubmit={handleSubmit} toggleEdit={setToggleEdit}>
-        <Dropzone
-          onDrop={onDrop}
-          multiple={false}
-          onChange={handleFileChange}
-        >
-          {({ getRootProps, getInputProps, isDragActive }) => {
-            return (
-              <div
-                {...getRootProps()}
-                style={styles.dropzone}
-              >
-                <input {...getInputProps()} />
-                {
-                  isDragActive ?
-                    <p>Drop files here...</p> :
-                    <p>Try dropping some files here, or click to select files to upload.</p>
-                }
-              </div>
-            )
-          }}
-        </Dropzone>
-        <input 
+      <Wrapper>
+        <Form onSubmit={handleSubmit} toggleEdit={setToggleEdit}>
+        <Center>
+          <Dropzone
+            onDrop={onDrop}
+            multiple={false}
+            onChange={handleFileChange}
+          >
+            {({ getRootProps, getInputProps, isDragActive }) => {
+              return (
+                <div
+                  {...getRootProps()}
+                  style={styles.dropzone}
+                >
+                  <input {...getInputProps()} />
+                  {
+                    isDragActive ?
+                      <p>Drop files here...</p> :
+                      <p>Try dropping some files here, or click to select files to upload.</p>
+                  }
+                </div>
+              )
+            }}
+          </Dropzone>
+        </Center>
+        <FormInput 
           label='First Name'
           name='firstName'
           value={firstName}
           required
           onChange={handleFirstNameChange}
         />
-        <input 
+        <FormInput 
           label='Last Name'
           name='lastName'
           value={lastName}
           required
           onChange={handleLastNameChange}
         />
-        <input 
+        <FormInput 
           label='Email'
           name='email'
           value={email}
           required
           onChange={handleEmailChange}
         />
-        <Button type='submit'>update</Button>
-      </form>
+        <Center>
+          <Button type='submit'>update</Button>
+        </Center>
+      </Form>
+      </Wrapper>
     )
   }
 
@@ -125,9 +135,19 @@ const Profile = (props) => {
   return (
     <ButtonWrap>
       {toggleEdit ? editView() : profileView()}
-  <Button className='profile-button' onClick={() => setToggleEdit(!toggleEdit)}>
-    {toggleEdit ? 'Exit' : 'Edit'}
-  </Button>
+      <Modal
+        trigger={<Button onClick={() => setToggleEdit(!toggleEdit)}>
+        {toggleEdit ? 'Exit' : 'Edit'}</Button>}
+        toggle={setToggleEdit}
+        open={toggleEdit}
+        onClose={setClose}
+      >
+        <Header>Edit Profile</Header>
+        <Hr />
+        <Modal.Content>
+          {editView()}
+        </Modal.Content>
+      </Modal>
     </ButtonWrap>
   )
 }

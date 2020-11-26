@@ -30,7 +30,7 @@ class AuthProvider extends Component {
     axios.delete('/api/auth/sign_out')
       .then( res => {
         this.setState({ user: null })
-        history.push('/login')
+        history.push('/')
       })
       .catch( err => console.log(err))
   }

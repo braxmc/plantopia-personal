@@ -73,3 +73,22 @@ export const Hr = styled.hr`
   color: #274428;
   background-color: #274428;
 `
+
+export const FormHeader = styled.div`
+  font-family: 'Noto Sans TC', sans-serif;
+  display: flex;
+  justify-content: center;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #274428;
+  font-size: 30px;
+  padding: 15px 0;
+  background-color: #EBEBEB;
+`
+
+export const FormHr = styled.hr`
+  height: 2px;
+  color: #274428;
+  background-color: #274428;
+  margin: 0;
+  padding: 0;
+`

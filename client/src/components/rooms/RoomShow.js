@@ -37,7 +37,7 @@ const RoomShow = (props) => {
         </>
         }
         <Center>
-        <Button onClick={() => setToggleEdit(!toggleEdit)}>{toggleEdit ? 'Close Room' : 'Edit Room'}</Button>
+        <Button onClick={() => setToggleEdit(!toggleEdit)}>{toggleEdit ? 'Exit' : 'Edit Room'}</Button>
         <Button1 onClick={() => props.deleteRoom(props.room.id)}>Delete</Button1>
         </Center>
         <Hr />
