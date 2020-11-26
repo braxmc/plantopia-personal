@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/devpointlabs/plantopia/issues"
   },
-  "homepage": "https://github.com/devpointlabs/plantopia#readme"
+  "homepage": "https://github.com/devpointlabs/plantopia#readme",
+  "dependencies": {
+    "react-dropzone": "^11.2.4"
+  }
 }
