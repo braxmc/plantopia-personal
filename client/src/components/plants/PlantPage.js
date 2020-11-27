@@ -50,7 +50,6 @@ const PlantPage = (props) => {
                     <PlantForm {...props} toggleEdit={setToggleEdit}/>
                   </Modal.Content>
                 </Modal>
-                {/* <Button onClick={() => setToggleEdit(!toggleEdit)}>{toggleEdit ? 'Close' : 'Edit'}</Button> */}
                 <Button onClick={() => props.deletePlant(props.plant.room_id, props.plant.id)}>Delete</Button>
               </ButtonWrap>
               <Line1 />
