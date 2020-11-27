@@ -4,11 +4,14 @@ import Spec from './Spec';
 import SpecForm from './SpecForm';
 
 import { Button } from '../../styles/SharedElements';
-
 import { SpecButton } from '../../styles/PlantPageElements';
+import { FormHeader, FormHr, Center } from '../../styles/RoomStyles'
+import { Modal } from 'semantic-ui-react'
 
 const Specs = (props) => {
   const [toggleForm, setToggleForm] = useState(false)
+
+  const [close, setClose] = useState(false)
 
   useEffect(() => {
     props.getSpecs(props.plant_id)
@@ -30,13 +33,20 @@ const Specs = (props) => {
 
   return (
     <>
-      <SpecButton onClick={() => setToggleForm(!toggleForm)}>{toggleForm ? 'Exit' : 'Add specs'}</SpecButton>
-      {
-        toggleForm ?
-          <SpecForm addSpec={props.addSpec} plant_id={props.plant_id} toggleForm={setToggleForm} />
-          :
-          <></>
-      }
+      <Center>
+        <Modal
+          trigger={<SpecButton onClick={() => setToggleForm(!toggleForm)}>{toggleForm ? 'Exit' : 'Add specs'}</SpecButton>}
+          toggle={setToggleForm}
+          open={toggleForm}
+          onClose={setClose}
+        >
+          <FormHeader>Add Specification's</FormHeader>
+          <FormHr />
+          <Modal.Content>
+            <SpecForm addSpec={props.addSpec} plant_id={props.plant_id} toggleForm={setToggleForm} />
+          </Modal.Content>
+        </Modal>
+      </Center>
       {listSpecs()}
     </>
   )

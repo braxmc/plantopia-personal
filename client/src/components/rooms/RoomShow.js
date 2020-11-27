@@ -34,9 +34,7 @@ const RoomShow = (props) => {
     return (
       <div>
       <Gray>
-        <>
-          <Header>{props.room.name}</Header>
-        </>
+        <Header>{props.room.name}</Header>
         <Center>
           <Modal
             trigger={<Button onClick={() => setToggleEdit(!toggleEdit)}>{toggleEdit ? 'Exit' : 'Edit Room'}</Button>}

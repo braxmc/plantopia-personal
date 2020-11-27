@@ -107,13 +107,13 @@ const SpecForm = (props) => {
         water: water, ferilizer: ferilizer, sunlight: sunlight, temperature: temperature, humidity: humidity, soil: soil, fullsize: fullsize, 
         planting: planting, annual: annual, perannual: perannual, plantgrowth: plantgrowth, prune: prune, repot: repot, indoor: indoor, outdoor: outdoor, pests: pests
       })
-      props.toggleEdit()
+      props.toggleEdit(false)
     } else {
       props.addSpec(props.plant_id, {
         water: water, ferilizer: ferilizer, sunlight: sunlight, temperature: temperature, humidity: humidity, soil: soil, fullsize: fullsize,
         planting: planting, annual: annual, perannual: perannual, plantgrowth: plantgrowth, prune: prune, repot: repot, indoor: indoor, outdoor: outdoor, pests: pests
       })
-      props.toggleForm()
+      props.toggleForm(false)
     }
   }
 
