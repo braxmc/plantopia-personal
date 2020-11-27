@@ -44,7 +44,7 @@ const Rooms = (props) => {
             open={toggleForm}
             onClose={setClose}
           >
-            <FormHeader>Add Plant</FormHeader>
+            <FormHeader>Add Room</FormHeader>
             <FormHr />
             <Modal.Content>
               <RoomForm addRoom={props.addRoom} toggle={setToggleForm} />

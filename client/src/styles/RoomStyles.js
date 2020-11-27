@@ -34,8 +34,8 @@ export const RoomCard = styled.div`
   font-weight: bold;
   background-color: #EBEBEB;
   color: #274428;
-  width: 200px;
-  height: 100px;
+  width: 300px;
+  height: 200px;
   border-radius: 10px;
   border: 2px solid #274428;
   display: flex;
@@ -50,7 +50,7 @@ export const RoomCard = styled.div`
 `
 
 export const RoomInfo = styled.p`
-  font-size: 20px;
+  font-size: 30px;
   margin: 0;
   padding: 0;
 `

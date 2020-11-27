@@ -5,11 +5,15 @@ import PlantForm from './PlantForm';
 import Plant from './Plant'
 
 import { Button, Row, Center } from '../../styles/PlantsStyles'
+import { FormHeader, FormHr } from '../../styles/RoomStyles'
+import { Modal } from 'semantic-ui-react'
 
 
 
 const Plants = (props) => {
   const [toggleForm, setToggleForm] = useState(false)
+
+  const [close, setClose] = useState(false)
 
 
   useEffect(() => {
@@ -32,14 +36,19 @@ const Plants = (props) => {
   return (
     <>
     <Center>
-      <Button onClick={() => setToggleForm(!toggleForm)}>{toggleForm ? 'Exit' : 'Add Plant'}</Button>
+      <Modal
+        trigger={<Button onClick={() => setToggleForm(!toggleForm)}>{toggleForm ? 'Exit' : 'Add Plant'}</Button>}
+        toggle={setToggleForm}
+        open={toggleForm}
+        onClose={setClose}
+      >
+        <FormHeader>Add Plant</FormHeader>
+        <FormHr />
+        <Modal.Content>
+          <PlantForm addPlant={ props.addPlant} room_id={props.room_id} toggleForm={setToggleForm} />
+        </Modal.Content>
+      </Modal>
     </Center>
-      {
-        toggleForm ? 
-        <PlantForm addPlant={ props.addPlant} room_id={props.room_id} toggleForm={setToggleForm} />
-        :
-        <></>
-      }
       {listPlants()}
     </>
   )
