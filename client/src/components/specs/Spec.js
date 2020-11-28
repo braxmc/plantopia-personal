@@ -3,11 +3,15 @@ import { SpecConsumer } from '../../providers/SpecProvider';
 import SpecForm from './SpecForm';
 
 import { SpecsContainer, Button } from '../../styles/PlantPageElements';
+import { Modal } from 'semantic-ui-react'
+import { FormHeader, FormHr } from '../../styles/RoomStyles'
 
 // import { Button } from '../../styles/SharedElements'
 
 const Spec = (props) => {
   const [toggleEdit, setToggleEdit] = useState(false)
+
+  const [close, setClose] = useState(false)
 
   useEffect(() => {
     props.getSpec(props.plant_id, props.id)
@@ -19,7 +23,7 @@ const Spec = (props) => {
         <SpecForm
           {...props}
           toggleEdit={setToggleEdit} 
-          updateSpec={props.updateSpec}
+ 
         />
       </>
     )
@@ -59,7 +63,16 @@ const Spec = (props) => {
               </SpecsContainer>
             </>
           }
-          <Button onClick={() => setToggleEdit(!toggleEdit)}>{toggleEdit ? 'Close' : 'Edit'}</Button>
+          <Modal
+            trigger={<Button onClick={() => setToggleEdit(!toggleEdit)}>{toggleEdit ? 'Close' : 'Edit'}</Button>}
+            toggleEdit={setToggleEdit}
+            open={toggleEdit}
+            onClose={setClose}
+          >
+            <FormHeader>Edit Specification's</FormHeader>
+            <FormHr />
+            <Modal.Content>{editView()}</Modal.Content>
+          </Modal>
           <Button onClick={() => props.deleteSpec(props.plant_id, props.id)}>Delete</Button>
       </ul>
     </>
