@@ -14,8 +14,8 @@ const Spec = (props) => {
   const [close, setClose] = useState(false)
 
   useEffect(() => {
-    props.getSpec(props.plant_id, props.id)
-  }, [])
+    props.getSpecs(props.plant_id, props.id)
+  }, [props.spec])
 
   const editView = () => {
     return (
