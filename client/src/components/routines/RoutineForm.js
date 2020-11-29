@@ -67,10 +67,10 @@ const RoutineForm = (props) => {
     e.preventDefault();
     if (props.routines) {
      props.updateRoutine(props.plant_id, props.id, {routine_time: Time, action, sunday, monday, tuesday, wednesday, thursday, friday, saturday})
-     props.toggleEdit()
+     props.toggleEdit(false)
     } else {
       props.addRoutine(props.plant_id, {routine_time: Time, action, sunday, monday, tuesday, wednesday, thursday, friday, saturday})
-      props.toggleForm()
+      props.toggleForm(false)
     }
   }
 

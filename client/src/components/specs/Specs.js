@@ -22,7 +22,7 @@ const Specs = (props) => {
       return (
         <ul>
           { props.specs.map( s =>
-            <Spec {...s} updateSpec={props.updateSpec} deleteSpec={props.deleteSpec}/> 
+            <Spec {...s} /> 
           )}
         </ul>
       )
