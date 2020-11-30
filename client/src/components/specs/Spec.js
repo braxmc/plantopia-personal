@@ -50,6 +50,9 @@ const Spec = (props) => {
               <SpecsContainer>
                 Sunlight: {props.sunlight}
               </SpecsContainer>
+              <SpecsContainer>
+                Colors: {props.colors}
+              </SpecsContainer>
             </>
           }
           <Modal

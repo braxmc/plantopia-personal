@@ -40,6 +40,6 @@ private
 
   def spec_params
     params.require(:spec).permit(:water, :ferilizer, :sunlight, :temperature, :humidity, :soil, :fullsize, 
-        :planting, :annual, :perannual, :plantgrowth, :prune, :repot, :indoor, :outdoor, :pests)
+        :planting, :annual, :perannual, :plantgrowth, :prune, :repot, :indoor, :outdoor, :pests, :colors)
   end
 end

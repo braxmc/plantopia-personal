@@ -9,6 +9,7 @@ const SpecForm = (props) => {
   const [soil, setSoil] = useState("");
   const [planting, setPlanting] = useState("");
   const [annual, setAnnual] = useState("");
+  const [colors, setColors] = useState('')
 
   useEffect(() => {
     if (props.id) {
@@ -17,6 +18,7 @@ const SpecForm = (props) => {
       setSoil(props.soil)
       setAnnual(props.annual)
       setPlanting(props.planting)
+      setColors(props.colors)
     } 
   }, [])
 
@@ -39,6 +41,10 @@ const SpecForm = (props) => {
   const handleAnnualChange = (e) => {
     setAnnual(e.target.value);
   }
+
+  const handleColorsChange = (e) => {
+    setColors(e.target.value);
+  }
  
 
   const handleSubmit = (e) => {
@@ -46,13 +52,13 @@ const SpecForm = (props) => {
     if (props.specs) {
       props.updateSpec(props.plant_id, props.id, { 
         water: water, sunlight: sunlight, soil: soil,
-        planting: planting, annual: annual
+        planting: planting, annual: annual, colors: colors
       })
       props.toggleEdit(false)
     } else {
       props.addSpec(props.plant_id, {
         water: water, sunlight: sunlight, soil: soil,
-        planting: planting, annual: annual
+        planting: planting, annual: annual, colors: colors
       })
       props.toggleForm(false)
     }
@@ -111,6 +117,16 @@ const SpecForm = (props) => {
             name="annual"
             onChange={handleAnnualChange}
             value={annual}
+          />
+        </InputDiv>
+        <InputDiv>
+          Colors-
+          <FormInput
+            label="colors"
+            placeholder="Colors"
+            name="colors"
+            onChange={handleColorsChange}
+            value={colors}
           />
         </InputDiv>
         <Button type='submit'>Submit</Button>
