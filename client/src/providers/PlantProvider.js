@@ -30,8 +30,7 @@ const PlantProvider = ({children}) => {
     data.append('file', plant.file);
     data.append('name', plant.name);
     data.append('species', plant.species);
-    data.append('colors', plant.colors);
-    axios.post(`/api/rooms/${room_id}/plants?name=${plant.name}&species=${plant.species}&colors=${plant.colors}`, data)
+    axios.post(`/api/rooms/${room_id}/plants?name=${plant.name}&species=${plant.species}`, data)
     .then( res => {
       setPlants([...plants, res.data ])
     })

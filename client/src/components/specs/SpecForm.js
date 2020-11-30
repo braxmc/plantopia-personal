@@ -90,10 +90,10 @@ const SpecForm = (props) => {
             />
         </InputDiv>
         <InputDiv>
-          Soil-
+          Soil/Water-
           <FormInput
             label="soil"
-            placeholder="Soil or Water"
+            placeholder="Soil/Water"
             name="soil"
             onChange={handleSoilChange}
             value={soil}

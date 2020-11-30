@@ -39,7 +39,7 @@ const Spec = (props) => {
                 Water: {props.water}
               </SpecsContainer>
               <SpecsContainer>
-                Soil: {props.soil}
+                Soil/Water: {props.soil}
               </SpecsContainer>
               <SpecsContainer>
                 Date Planted: {props.planting}             

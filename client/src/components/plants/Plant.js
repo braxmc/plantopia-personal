@@ -10,7 +10,6 @@ const Plant = (props) => (
         <Left>
           <PlantInfo>{props.name}</PlantInfo>
           <PlantInfo>{props.species}</PlantInfo>
-          <PlantInfo>{props.colors}</PlantInfo>
         </Left>
         <Right>
           <Img src={props.image || '/images/plant.svg'} />

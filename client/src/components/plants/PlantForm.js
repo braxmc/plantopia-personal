@@ -7,14 +7,12 @@ import { Button, Wrapper, Form, FormInput, DropDiv } from '../../styles/RoomForm
 const PlantForm = (props) => {
   const [name, setName] = useState("");
   const [species, setSpecies] = useState("");
-  const [colors, setColors] = useState("");
   const [file, setFile] = useState('');
 
   useEffect (() => {
     if (props.plant) {
       setName(props.plant.name)
       setSpecies(props.plant.species)
-      setColors(props.plant.colors)
       setFile(props.plant.file)
     }
   }, [])
@@ -27,10 +25,6 @@ const PlantForm = (props) => {
     setSpecies(e.target.value);
   }
 
-  const handleColorsChange = (e) => {
-    setColors(e.target.value);
-  }
-
   const handleFileChange = (e) => {
     setFile(e.target.value)
   }
@@ -38,10 +32,10 @@ const PlantForm = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (props.plant) {
-      props.updatePlant(props.plant.room_id, props.plant.id, {name, species, colors, file})
+      props.updatePlant(props.plant.room_id, props.plant.id, {name, species, file})
       props.toggleEdit(false)
     } else {
-      props.addPlant(props.room_id, {name, species, colors, file})
+      props.addPlant(props.room_id, {name, species, file})
       props.toggleForm(false)
     }
   }
@@ -91,14 +85,6 @@ const PlantForm = (props) => {
           required
           onChange={handleSpeciesChange}
           value={species}
-        />
-        <FormInput
-          label="Plant's Colors"
-          placeholder="Plants Colors"
-          name="colors"
-          required
-          onChange={handleColorsChange}
-          value={colors}
         />
         <Button type='submit'>Submit</Button>
       </Form>
