@@ -10,7 +10,7 @@ class Api::PlantsController < ApplicationController
   end
 
   def create
-    plant = @room.plants.new(name: params[:name], species: params[:species])
+    plant = @room.plants.new(name: params[:name].capitalize(), species: params[:species].capitalize())
 
     file = params[:file]
     
@@ -32,9 +32,8 @@ class Api::PlantsController < ApplicationController
 
   def update
     plant = @room.plants.find(params[:id])
-    plant.name = params[:name] ? params[:name] : plant.name
-    plant.species = params[:species] ? params[:species] : plant.species
-    plant.colors = params[:colors] ? params[:colors] : plant.colors
+    plant.name = params[:name] ? params[:name].capitalize() : plant.name
+    plant.species = params[:species] ? params[:species].capitalize() : plant.species
 
     file = params[:file]
 
