@@ -4,7 +4,7 @@ import Spec from './Spec';
 import SpecForm from './SpecForm';
 
 import { Button } from '../../styles/SharedElements';
-import { SpecButton } from '../../styles/PlantPageElements';
+import { SpecButton, Info } from '../../styles/PlantPageElements';
 import { FormHeader, FormHr, Center } from '../../styles/RoomStyles'
 import { Modal } from 'semantic-ui-react'
 
@@ -27,7 +27,7 @@ const Specs = (props) => {
         </ul>
       )
     } else {
-      return (<h1>No Specs</h1>)
+      return (<Info>No Specs</Info>)
     }
   }
 

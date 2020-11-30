@@ -36,30 +36,19 @@ const Spec = (props) => {
           {toggleEdit ? editView() :
             <>
               <SpecsContainer>
-                Water Amount: {props.water} ||
-                Ferilizer: {props.ferilizer}
+                Water: {props.water}
               </SpecsContainer>
               <SpecsContainer>
-                Sunlight: {props.sunlight } ||
-                Termperature: {props.temperature}
+                Soil: {props.soil}
               </SpecsContainer>
               <SpecsContainer>
-                Humidity: {props.humidity} ||
-                Soil: {props.soil} ||
-                Size: {props.fullsize}
+                Date Planted: {props.planting}             
               </SpecsContainer>
               <SpecsContainer>
-                Date Planted: {props.planting} ||
                 Annual: {props.annual}
               </SpecsContainer>
               <SpecsContainer>
-                Preannual: {props.perannual} ||
-                Plant Growth: {props.plantgrowth}
-              </SpecsContainer>
-              <SpecsContainer>
-                Re-Pot: {props.repot} ||
-                Indoor: {props.indoor ? "✓" : "✗"} ||
-                Outdoor: {props.outdoor ? "✓" : "✗"}
+                Sunlight: {props.sunlight}
               </SpecsContainer>
             </>
           }

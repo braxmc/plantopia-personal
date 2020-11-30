@@ -27,7 +27,7 @@ const Routines = (props) => {
         </ul>
       )
     } else {
-      return (<h1>No Routines</h1>)
+      return (<Info>No Routines</Info>)
     }
   } 
 
