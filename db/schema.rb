@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_30_063608) do
+ActiveRecord::Schema.define(version: 2020_11_30_173526) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,7 +54,6 @@ ActiveRecord::Schema.define(version: 2020_11_30_063608) do
   create_table "specs", force: :cascade do |t|
     t.string "water"
     t.string "ferilizer"
-    t.integer "sunlight"
     t.integer "temperature"
     t.integer "humidity"
     t.string "soil"
@@ -72,6 +71,7 @@ ActiveRecord::Schema.define(version: 2020_11_30_063608) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "plant_id", null: false
     t.string "colors"
+    t.string "sunlight"
     t.index ["plant_id"], name: "index_specs_on_plant_id"
   end
 

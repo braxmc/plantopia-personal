@@ -45,7 +45,7 @@ const Spec = (props) => {
                 Date Planted: {props.planting}             
               </SpecsContainer>
               <SpecsContainer>
-                Annual: {props.annual}
+                Annual/Perennial: {props.annual}
               </SpecsContainer>
               <SpecsContainer>
                 Sunlight: {props.sunlight}

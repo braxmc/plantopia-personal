@@ -84,7 +84,6 @@ const SpecForm = (props) => {
             label="sunlight"
             placeholder="Sunlight Required?"
             name="sunlight"
-            type="number"
             onChange={handleSunlightChange}
             value={sunlight}
             />

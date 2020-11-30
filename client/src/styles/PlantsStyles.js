@@ -53,13 +53,13 @@ export const Left = styled.div`
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  padding-left: 10px;
+  padding-left: 20px;
 `
 
 export const Right = styled.div`
   display: flex;
   justify-content: flex-end;
-  padding-right: 10px;
+  padding-right: 20px;
 `
 
 export const Row = styled.div`
