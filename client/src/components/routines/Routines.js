@@ -15,7 +15,7 @@ const Routines = (props) => {
 
   useEffect(() => {
     props.getRoutines(props.plant_id)
-  }, [])
+  }, [props.plant_id])
 
   const listRoutines = () => {
     if (props.routines.length !== 0) {

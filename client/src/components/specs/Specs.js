@@ -15,7 +15,7 @@ const Specs = (props) => {
 
   useEffect(() => {
     props.getSpecs(props.plant_id)
-  }, [])
+  }, [props.plant_id])
 
   const listSpecs = () => {
     if (props.specs.length !== 0) {
