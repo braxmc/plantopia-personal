@@ -3,8 +3,8 @@ class Api::UsersController < ApplicationController
   
   def update
     user = User.find(params[:id])
-    user.first_name = params[:first_name] ? params[:first_name] : user.first_name
-    user.last_name = params[:last_name] ? params[:last_name] : user.last_name
+    user.first_name = params[:first_name] ? params[:first_name].capitalize() : user.first_name
+    user.last_name = params[:last_name] ? params[:last_name].capitalize() : user.last_name
     user.email = params[:email] ? params[:email] : user.email
   
     file = params[:file]
