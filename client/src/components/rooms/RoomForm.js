@@ -7,18 +7,18 @@ import { Wrapper, Form, Button, FormInput } from '../../styles/RoomFormStyles'
 
 
 const RoomForm = (props) => {
-  const [roomName, setRoomName] = useState("");
+  const [name, setName] = useState("");
   const [sunAmount, setSunAmount] = useState("");
 
   useEffect(() => {
     if (props.room) {
-      setRoomName(props.room.name)
+      setName(props.room.name)
       setSunAmount(props.room.sun_amount)
     }
   }, [])
 
-  const handleRoomNameChange = (e) => {
-    setRoomName(e.target.value);
+  const handleNameChange = (e) => {
+    setName(e.target.value);
   }
 
   const handleSunAmountChange = (e) => {
@@ -28,10 +28,10 @@ const RoomForm = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (props.room) {
-      props.updateRoom(props.room.id, {name: roomName, sun_amount: sunAmount, user_id: props.user.id})
+      props.updateRoom(props.room.id, {name: name, sun_amount: sunAmount, user_id: props.user.id})
       props.toggleEdit(false)
     } else {
-      props.addRoom({name: roomName, sun_amount: sunAmount, user_id: props.user.id})
+      props.addRoom({name: name, sun_amount: sunAmount, user_id: props.user.id})
       props.toggle(false)
     }
   }
@@ -42,10 +42,10 @@ const RoomForm = (props) => {
         <FormInput
           label="Room Name"
           placeholder="Room Name"
-          name="roomName"
+          name="name"
           required
-          onChange={handleRoomNameChange}
-          value={roomName}
+          onChange={handleNameChange}
+          value={name}
         />
         <FormInput
           label="Room's Sun Amount"
