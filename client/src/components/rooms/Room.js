@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { RoomConsumer } from '../../providers/RoomProvider';
 
-import { RoomCard, RoomInfo } from '../../styles/RoomStyles'
+import { RoomCard, RoomInfo, RoomInfo1 } from '../../styles/RoomStyles'
 
 
 const Room = (props) => {
@@ -12,7 +12,7 @@ const Room = (props) => {
     <Link to={`/rooms/${props.id}`}>
       <RoomCard>
         <RoomInfo>{props.name}</RoomInfo>
-        <RoomInfo>{props.sun_amount}</RoomInfo>
+        <RoomInfo1>Sunlight? {props.sun_amount}</RoomInfo1>
       </RoomCard>
     </Link>
     )

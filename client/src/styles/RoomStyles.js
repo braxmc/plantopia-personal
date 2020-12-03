@@ -50,7 +50,12 @@ export const RoomCard = styled.div`
 `
 
 export const RoomInfo = styled.p`
-  font-size: 30px;
+  font-size: 35px;
+  margin: 0;
+  padding: 0;
+`
+export const RoomInfo1 = styled.p`
+  font-size: 25px;
   margin: 0;
   padding: 0;
 `

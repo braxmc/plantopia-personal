@@ -49,7 +49,7 @@ const RoomForm = (props) => {
         />
         <FormInput
           label="Room's Sun Amount"
-          placeholder="Sun Amount"
+          placeholder="Does this room get sun?"
           name="sunAmount"
           required
           onChange={handleSunAmountChange}
