@@ -12,7 +12,7 @@ const Room = (props) => {
     <Link to={`/rooms/${props.id}`}>
       <RoomCard>
         <RoomInfo>{props.name}</RoomInfo>
-        <RoomInfo1>Sunlight? {props.sun_amount}</RoomInfo1>
+        <RoomInfo1>Sunlight? {props.sun}</RoomInfo1>
       </RoomCard>
     </Link>
     )

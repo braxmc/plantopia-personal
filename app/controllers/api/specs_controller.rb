@@ -39,7 +39,6 @@ private
   end
 
   def spec_params
-    params.require(:spec).permit(:water, :ferilizer, :sunlight, :temperature, :humidity, :soil, :fullsize, 
-        :planting, :annual, :perannual, :plantgrowth, :prune, :repot, :indoor, :outdoor, :pests, :colors)
+    params.require(:spec).permit(:water, :sunlight, :soil, :annual, :planting, :colors)
   end
 end

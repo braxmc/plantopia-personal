@@ -9,7 +9,7 @@ class Api::RoomsController < ApplicationController
   end
 
   def create
-    room = Room.new(name: params[:name], sun_amount: params[:sun_amount])
+    room = Room.new(room_params)
     if room.save
       render json: room
     else
@@ -33,6 +33,6 @@ class Api::RoomsController < ApplicationController
 
   private
     def room_params
-      params.require(:room).permit(:name, :sun_amount)
+      params.require(:room).permit(:name, :sun, :user_id)
     end
 end

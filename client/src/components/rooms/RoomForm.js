@@ -8,12 +8,12 @@ import { Wrapper, Form, Button, FormInput } from '../../styles/RoomFormStyles'
 
 const RoomForm = (props) => {
   const [name, setName] = useState("");
-  const [sunAmount, setSunAmount] = useState("");
+  const [sun, setSun] = useState("");
 
   useEffect(() => {
     if (props.room) {
       setName(props.room.name)
-      setSunAmount(props.room.sun_amount)
+      setSun(props.room.sun)
     }
   }, [])
 
@@ -21,17 +21,17 @@ const RoomForm = (props) => {
     setName(e.target.value);
   }
 
-  const handleSunAmountChange = (e) => {
-    setSunAmount(e.target.value);
+  const handleSunChange = (e) => {
+    setSun(e.target.value);
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (props.room) {
-      props.updateRoom(props.room.id, {name: name, sun_amount: sunAmount, user_id: props.user.id})
+      props.updateRoom(props.room.id, {name: name, sun: sun, user_id: props.user.id})
       props.toggleEdit(false)
     } else {
-      props.addRoom({name: name, sun_amount: sunAmount, user_id: props.user.id})
+      props.addRoom({ name, sun, user_id: props.user.id})
       props.toggle(false)
     }
   }
@@ -50,10 +50,10 @@ const RoomForm = (props) => {
         <FormInput
           label="Room's Sun Amount"
           placeholder="Does this room get sun?"
-          name="sunAmount"
+          name="sun"
           required
-          onChange={handleSunAmountChange}
-          value={sunAmount}
+          onChange={handleSunChange}
+          value={sun}
         />
         <Button type="submit">Submit</Button>
       </Form>
