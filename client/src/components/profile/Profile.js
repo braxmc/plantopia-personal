@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 
 import {AuthConsumer} from '../../providers/AuthProvider'
 
+import Rooms from '../rooms/Rooms'
+
 import Dropzone from 'react-dropzone'
 
 import { UserWrap, ButtonWrap, Button, Name, ImgWrap, Img, Center, Header, Hr } from '../../styles/ProfileStyle'
@@ -61,14 +63,17 @@ const Profile = (props) => {
   const profileView = () => {
     const {auth: { user }, } = props;
     return (
-      <UserWrap>
-        <ImgWrap>
-          <Img src={user.image || 'https://d30y9cdsu7xlg0.cloudfront.net/png/15724-200.png'} />
-        </ImgWrap>
-        <Name>
-          {props.auth.user.first_name}, {props.auth.user.last_name}
-        </Name>
-      </UserWrap>
+      <>
+        <UserWrap>
+          <ImgWrap>
+            <Img src={user.image || 'https://d30y9cdsu7xlg0.cloudfront.net/png/15724-200.png'} />
+          </ImgWrap>
+          <Name>
+            {props.auth.user.first_name}, {props.auth.user.last_name}
+          </Name>
+        </UserWrap>
+        <Rooms />
+      </>
     )
   }
 
