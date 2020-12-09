@@ -45,7 +45,7 @@ const RoomProvider = ({children}) => {
     axios.delete(`/api/rooms/${id}`)
     .then( res => {
       setRooms(rooms.filter(r => r.id !== id))
-      window.location.href='/rooms'
+      window.location.href='/profile'
       // alert(res.data.message)
     })
     .catch(err => console.log(err))

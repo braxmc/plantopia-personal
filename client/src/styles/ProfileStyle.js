@@ -4,7 +4,8 @@ export const UserWrap = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 25vw;
+  align-items: center;
+  width: 35vw;
   max-width: 350px;
   min-width: 200px;
   background: #EBEBEB;
@@ -24,15 +25,15 @@ export const Name = styled.p`
   }
 `
 
-export const ButtonWrap = styled.div`
-  width: 25vw;
-  max-width: 350px;
+export const Wrap = styled.div`
+  /* width: 25vw;
+  max-width: 350px; */
+  height: 100vh;
   min-width: 200px;
   background: #EBEBEB;
-  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+
 `
 
 export const Button = styled.button`
@@ -98,4 +99,17 @@ export const Hr = styled.hr`
   background-color: #274428;
   margin: 0;
   padding: 0;
+`
+
+export const ProfileWrap = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+`
+
+export const RoomWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid #274428;
+  width: 100vw;
 `

@@ -6,7 +6,7 @@ import Rooms from '../rooms/Rooms'
 
 import Dropzone from 'react-dropzone'
 
-import { UserWrap, ButtonWrap, Button, Name, ImgWrap, Img, Center, Header, Hr } from '../../styles/ProfileStyle'
+import { UserWrap, Wrap, Button, Name, ImgWrap, Img, Center, Header, Hr, RoomWrap } from '../../styles/ProfileStyle'
 import { Modal } from 'semantic-ui-react';
 import { Wrapper, Form, FormInput } from '../../styles/RoomFormStyles'
 
@@ -21,6 +21,8 @@ const Profile = (props) => {
   const [toggleEdit, setToggleEdit] = useState(false)
 
   const [close, setClose] = useState(false)
+
+  const {auth: { user }, } = props;
 
   useEffect(() => {
     const { auth: { user: { first_name, last_name, email, }, }, } = props;
@@ -64,15 +66,7 @@ const Profile = (props) => {
     const {auth: { user }, } = props;
     return (
       <>
-        <UserWrap>
-          <ImgWrap>
-            <Img src={user.image || 'https://d30y9cdsu7xlg0.cloudfront.net/png/15724-200.png'} />
-          </ImgWrap>
-          <Name>
-            {props.auth.user.first_name}, {props.auth.user.last_name}
-          </Name>
-        </UserWrap>
-        <Rooms />
+        
       </>
     )
   }
@@ -138,22 +132,33 @@ const Profile = (props) => {
 
 
   return (
-    <ButtonWrap>
-      {toggleEdit ? editView() : profileView()}
+    <Wrap>
+    <UserWrap>
+              <ImgWrap>
+                <Img src={user.image || 'https://d30y9cdsu7xlg0.cloudfront.net/png/15724-200.png'} />
+              </ImgWrap>
+              <Name>
+                {props.auth.user.first_name}, {props.auth.user.last_name}
+              </Name>
+        
       <Modal
         trigger={<Button onClick={() => setToggleEdit(!toggleEdit)}>
         {toggleEdit ? 'Exit' : 'Edit'}</Button>}
         toggle={setToggleEdit}
         open={toggleEdit}
         onClose={setClose}
-      >
+        >
         <Header>Edit Profile</Header>
-        <Hr />
         <Modal.Content>
           {editView()}
         </Modal.Content>
       </Modal>
-    </ButtonWrap>
+        {toggleEdit ? editView() : profileView()}
+        </UserWrap>
+        <RoomWrap>
+          <Rooms />
+        </RoomWrap>
+    </Wrap>
   )
 }
 
