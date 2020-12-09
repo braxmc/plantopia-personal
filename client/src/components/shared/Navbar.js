@@ -16,8 +16,8 @@ const Navbar = (props) => {
       return (
       // <div>Hello {user.firstName}!
       <div className="rightNav">
-        <Link to='/'>Home</Link>
-        <Link to='/rooms'>Rooms</Link>
+        {/* <Link to='/'>Home</Link> */}
+        {/* <Link to='/rooms'>Rooms</Link> */}
         <Link to='/profile'>Profile</Link>
         {/* <Link to='/'>Log Out</Link> */}
         <Link onClick={ () => handleLogout(props.history)} to='/'>Log Out</Link>
@@ -27,6 +27,7 @@ const Navbar = (props) => {
     } else {
       return (
         <div className="righNav">
+        <Link to='/'>Home</Link>
         <Link to='/login'>Log In</Link>
         <Link to='/register'>Register</Link>
         </div>
