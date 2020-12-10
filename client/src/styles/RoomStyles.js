@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Header = styled.header `
 font-family: 'Noto Sans TC', sans-serif;
 color: #274428;
-font-size: 50px;
+font-size: 60px;
 display: flex;
 justify-content: center;
 padding-top: 40px;
@@ -21,7 +21,7 @@ export const Button = styled.button`
   height: 2em;
   width: 8em;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 
  &:hover {
   color: ${props => props.primary ? "white" : "#274428"};
@@ -34,8 +34,8 @@ export const RoomCard = styled.div`
   font-weight: bold;
   background-color: #EBEBEB;
   color: #274428;
-  width: 300px;
-  height: 200px;
+  width: 275px;
+  height: 175px;
   border-radius: 10px;
   border: 2px solid #274428;
   display: flex;
@@ -77,6 +77,8 @@ export const Hr = styled.hr`
   height: 2px;
   color: #274428;
   background-color: #274428;
+  width: 100%;
+  margin: 0;
 `
 
 export const FormHeader = styled.div`

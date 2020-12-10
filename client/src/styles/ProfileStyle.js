@@ -18,10 +18,10 @@ export const Name = styled.p`
   font-family: 'Noto Sans TC', sans-serif;
   color: #274428;
   font-size: 30px;
-  padding-bottom: 10px;
+  padding-top: 10px;
 
   @media screen and (max-width: 1050px) {
-    font-size: 20px;
+    font-size: 25px;
   }
 `
 
@@ -30,7 +30,6 @@ export const Wrap = styled.div`
   max-width: 350px; */
   height: 100vh;
   min-width: 200px;
-  background: #EBEBEB;
   display: flex;
   flex-direction: row;
 
@@ -65,13 +64,13 @@ export const Img = styled.img`
   border-radius: 50%;
   margin-left: 10px;
   margin-right: 10px;
-  margin-top: 10px;
-  width: 250px;
-  height: 250px;
+  margin-top: 20px;
+  width: 225px;
+  height: 225px;
 
   @media screen and (max-width: 1050px) {
-    width: 150px;
-    height: 150px;
+    width: 175px;
+    height: 175px;
   }
 `
 

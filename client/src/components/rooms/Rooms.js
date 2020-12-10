@@ -52,6 +52,7 @@ const Rooms = (props) => {
           </Modal>
         </Center>
       </Gray>
+      <Hr />
         {listRooms()}
     </>
   )
