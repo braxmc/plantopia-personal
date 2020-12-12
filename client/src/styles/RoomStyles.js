@@ -34,7 +34,7 @@ export const RoomCard = styled.div`
   font-weight: bold;
   background-color: #EBEBEB;
   color: #274428;
-  width: 275px;
+  width: 250px;
   height: 175px;
   border-radius: 10px;
   border: 2px solid #274428;
@@ -98,4 +98,9 @@ export const FormHr = styled.hr`
   background-color: #274428;
   margin: 0;
   padding: 0;
+`
+
+export const BorderLeft = styled.div`
+  border-left: 2.75px solid #274428;
+  height: 100vh;
 `

@@ -7,7 +7,7 @@ export const UserWrap = styled.div`
   align-items: center;
   width: 35vw;
   max-width: 350px;
-  min-width: 200px;
+  min-width: 250px;
   background: #EBEBEB;
 `
 
@@ -64,7 +64,7 @@ export const Img = styled.img`
   border-radius: 50%;
   margin-left: 10px;
   margin-right: 10px;
-  margin-top: 20px;
+  margin-top: 30px;
   width: 225px;
   height: 225px;
 
@@ -109,6 +109,5 @@ export const ProfileWrap = styled.div`
 export const RoomWrap = styled.div`
   display: flex;
   flex-direction: column;
-  border-left: 2px solid #274428;
   width: 100vw;
 `

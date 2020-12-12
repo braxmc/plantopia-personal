@@ -10,7 +10,7 @@ const RoomProvider = ({children}) => {
   const [room, setRoom] = useState()
 
   const getRooms = () => {
-    axios.get(`/api/rooms`)
+    axios.get(`/api/rooms/`)
     .then( res => {
       setRooms( res.data )
     })
