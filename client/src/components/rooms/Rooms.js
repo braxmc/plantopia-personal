@@ -51,11 +51,11 @@ const Rooms = (props) => {
             </Modal.Content>
           </Modal>
         </Center>
-      </Gray>
-      <Hr />
+      {/* <Hr /> */}
         <BorderLeft>
         {listRooms()}
         </BorderLeft>
+      </Gray>
     </>
   )
 }

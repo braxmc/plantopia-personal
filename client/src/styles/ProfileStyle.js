@@ -32,7 +32,7 @@ export const Wrap = styled.div`
   min-width: 200px;
   display: flex;
   flex-direction: row;
-
+  background-color: #EBEBEB;
 `
 
 export const Button = styled.button`

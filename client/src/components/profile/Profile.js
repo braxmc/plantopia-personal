@@ -154,7 +154,7 @@ const Profile = (props) => {
         </Modal.Content>
       </Modal>
         {toggleEdit ? editView() : profileView()}
-        </UserWrap>
+    </UserWrap>
         <RoomWrap>
           <Rooms user_id={props.auth.user.id} />
         </RoomWrap>

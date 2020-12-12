@@ -66,6 +66,7 @@ export const RoomList = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 30px;
+  border-radius: 20px;
 `
 export const Center = styled.div`
   display: flex;
@@ -101,6 +102,8 @@ export const FormHr = styled.hr`
 `
 
 export const BorderLeft = styled.div`
-  border-left: 2.75px solid #274428;
-  height: 100vh;
+  border: 2.75px solid #274428;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  padding-bottom: 30px;
 `
