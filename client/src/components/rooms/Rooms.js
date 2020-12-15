@@ -14,12 +14,11 @@ import { Gray } from '../../styles/RoomShowElements'
 const Rooms = (props) => {
   const [toggleForm, setToggleForm] = useState(false)
 
-  const [open, setOpen] = useState(true)
   const [close, setClose] = useState(false)
 
   useEffect(() => {
-    props.getRooms()
-  }, [])
+    props.getRooms(props.user_id)
+  }, [props.user_id])
 
   const listRooms = () => {
     if (props.rooms.length !== 0) {
@@ -55,7 +54,7 @@ const Rooms = (props) => {
         <BorderLeft>
         {listRooms()}
         </BorderLeft>
-      </Gray>
+      </Gray>                 
     </>
   )
 }

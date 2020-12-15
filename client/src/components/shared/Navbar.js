@@ -1,8 +1,9 @@
 import React, {useEffect} from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import {AuthConsumer} from '../../providers/AuthProvider';
-import {} from '../../styles/NavbarStyles';
-import '../../styles/Navbar.css'
+
+import { Right, Left, Wrap, Img, NavLink } from '../../styles/NavbarStyles';
+// import '../../styles/Navbar.css'
 
 import Logo from '../../images/logo.png';
 
@@ -15,22 +16,22 @@ const Navbar = (props) => {
     if (user) {
       return (
       // <div>Hello {user.firstName}!
-      <div className="rightNav">
+      <Right>
         {/* <Link to='/'>Home</Link> */}
         {/* <Link to='/rooms'>Rooms</Link> */}
-        <Link to='/profile'>Profile</Link>
+        <NavLink to='/profile'>Profile</NavLink>
         {/* <Link to='/'>Log Out</Link> */}
-        <Link onClick={ () => handleLogout(props.history)} to='/'>Log Out</Link>
-      </div>
+        <NavLink onClick={ () => handleLogout(props.history)} to='/'>Log Out</NavLink>
+      </Right>
       // </div>
       )
     } else {
       return (
-        <div className="righNav">
-        <Link to='/'>Home</Link>
-        <Link to='/login'>Log In</Link>
-        <Link to='/register'>Register</Link>
-        </div>
+        <Right>
+        <NavLink to='/'>Home</NavLink>
+        <NavLink to='/login'>Log In</NavLink>
+        <NavLink to='/register'>Register</NavLink>
+        </Right>
       )
     } 
   }
@@ -40,12 +41,12 @@ const Navbar = (props) => {
 // },[])
 
   return (
-    <div className="navContainer">
-        <div className='leftWrap'>
-          <img src={Logo} alt='logo' />
-        </div>
+    <Wrap>
+        <Left>
+          <Img src={Logo} alt='logo' />
+        </Left>
       {navAuth()}
-    </div>
+    </Wrap>
   )
 }
 

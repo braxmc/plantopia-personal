@@ -106,4 +106,5 @@ export const BorderLeft = styled.div`
   border-radius: 20px;
   background-color: #FFFFFF;
   padding-bottom: 30px;
+  margin-right: 30px;
 `

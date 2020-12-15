@@ -69,7 +69,7 @@ color: ${props => props.primary ? "#274428" : "white"};
 font-size: 1.3em;
 margin: 10px;
 padding: 0.25em 1em;
-border: 2px solid #274428;
+border: 2px solid ;
 border-radius: 10px;
 width: 8em;
 align-items: center;
