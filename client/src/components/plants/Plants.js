@@ -37,7 +37,7 @@ const Plants = (props) => {
     <>
     <Center>
       <Modal
-        trigger={<Button onClick={() => setToggleForm(!toggleForm)}>{toggleForm ? 'Exit' : 'Add Plant'}</Button>}
+        trigger={<Button onClick={() => setToggleForm(!toggleForm)}>Add Plant</Button>}
         toggle={setToggleForm}
         open={toggleForm}
         onClose={setClose}

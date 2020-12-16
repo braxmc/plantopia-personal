@@ -4,7 +4,7 @@ import Spec from './Spec';
 import SpecForm from './SpecForm';
 
 import { Button } from '../../styles/SharedElements';
-import { SpecButton, Info } from '../../styles/PlantPageElements';
+import { RoutineButton, Info } from '../../styles/PlantPageElements';
 import { FormHeader, FormHr, Center } from '../../styles/RoomStyles'
 import { Modal } from 'semantic-ui-react'
 
@@ -35,7 +35,7 @@ const Specs = (props) => {
     <>
       <Center>
         <Modal
-          trigger={<SpecButton onClick={() => setToggleForm(!toggleForm)}>{toggleForm ? 'Exit' : 'Add specs'}</SpecButton>}
+          trigger={<RoutineButton onClick={() => setToggleForm(!toggleForm)}>Add specs</RoutineButton>}
           toggle={setToggleForm}
           open={toggleForm}
           onClose={setClose}

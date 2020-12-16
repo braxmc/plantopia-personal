@@ -56,7 +56,7 @@ const Spec = (props) => {
             </>
           }
           <Modal
-            trigger={<Button onClick={() => setToggleEdit(!toggleEdit)}>{toggleEdit ? 'Close' : 'Edit'}</Button>}
+            trigger={<Button onClick={() => setToggleEdit(!toggleEdit)}>Edit</Button>}
             toggleEdit={setToggleEdit}
             open={toggleEdit}
             onClose={setClose}

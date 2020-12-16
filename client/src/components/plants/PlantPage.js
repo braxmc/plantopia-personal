@@ -40,7 +40,7 @@ const PlantPage = (props) => {
         <Image src={props.plant.image || '/images/plant.svg'} />
               <ButtonWrap>
                 <Modal
-                  trigger={<Button onClick={() => setToggleEdit(!toggleEdit)}>{toggleEdit ? 'Close' : 'Edit'}</Button>}
+                  trigger={<Button onClick={() => setToggleEdit(!toggleEdit)}>Edit</Button>}
                   toggleEdit={setToggleEdit}
                   open={toggleEdit}
                   onClose={setClose}

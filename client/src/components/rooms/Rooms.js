@@ -17,8 +17,8 @@ const Rooms = (props) => {
   const [close, setClose] = useState(false)
 
   useEffect(() => {
-    props.getRooms(props.user_id)
-  }, [props.user_id])
+    props.getRooms()
+  }, [])
 
   const listRooms = () => {
     if (props.rooms.length !== 0) {

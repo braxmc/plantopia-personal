@@ -35,7 +35,7 @@ const Routines = (props) => {
     <>
       <Center>
         <Modal
-          trigger={<RoutineButton onClick={() => setToggleForm(!toggleForm)}>{ toggleForm ? 'Exit' : 'Add routine' }</RoutineButton>}
+          trigger={<RoutineButton onClick={() => setToggleForm(!toggleForm)}>Add routine</RoutineButton>}
           toggle={setToggleForm}
           open={toggleForm}
           onClose={setClose}         
