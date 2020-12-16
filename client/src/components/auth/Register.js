@@ -1,7 +1,10 @@
 import React from 'react';
 import { AuthConsumer, } from "../../providers/AuthProvider";
 import { Segment } from 'semantic-ui-react';
-import {Button, Header, Form, Input, Label, FormWrapper, } from '../../styles/SharedElements';
+
+import { Header, Form, Input, Label, FormWrapper, } from '../../styles/SharedElements';
+
+import { BgWrapper, Button } from '../../styles/FormElements';
 
 class Register extends React.Component {
   state = { firstName: '', lastName: '', email: '', password: '', passwordConfirmation: '' };
@@ -24,7 +27,7 @@ class Register extends React.Component {
   render() {
     const { email, password, passwordConfirmation, firstName, lastName } = this.state;
     return (
-      <FormWrapper>
+      <BgWrapper>
         <Header as='h1' textAlign='center'>Register</Header>
         <Form onSubmit={this.handleSubmit}>
           <Label>First Name</Label>
@@ -81,7 +84,7 @@ class Register extends React.Component {
             <Button primary type='submit'>Submit</Button>
           </Segment>
         </Form>
-      </FormWrapper>
+      </BgWrapper>
     )
   }
 }
