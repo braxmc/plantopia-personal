@@ -1,7 +1,7 @@
 import React from 'react';
 import { AuthConsumer, } from "../../providers/AuthProvider";
 
-import { Form, Wrapper, Header, ButtonWrapper, FormInput, Button, Img, HomeBg } from '../../styles/FormElements';
+import { Form, BgWrapper, Header, ButtonWrapper, FormInput, Button, Img, HomeBg } from '../../styles/FormElements';
 
 // import { Img, HomeBg } from '../../styles/SharedElements';
 
@@ -25,7 +25,7 @@ class Login extends React.Component {
     const { email, password, } = this.state;
 
     return (
-      <Wrapper>
+      <BgWrapper>
         <Header>Login</Header>
         <Form onSubmit={this.handleSubmit}>
           <FormInput
@@ -50,7 +50,7 @@ class Login extends React.Component {
             <Button primary type='submit'>Submit</Button>
           </ButtonWrapper>
         </Form>
-      </Wrapper>
+      </BgWrapper>
     )
   }
 }

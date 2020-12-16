@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 import Bg from '../images/bg.jpg';
 
+import bg from '../images/plant-bg.jpg'
+
 export const Header = styled.h1`
   font-family: 'Noto Sans TC', sans-serif;
   font-size: 50px;
@@ -33,6 +35,19 @@ export const Wrapper = styled.div`
   position: relative;
   height: 100vh;
   width: 100%;
+`
+
+export const BgWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url(${bg});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 `
 
 export const Img = styled.img`

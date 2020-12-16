@@ -49,6 +49,7 @@ export const Button = styled.button`
   height: 2em;
   width: 7em;
   margin-left: 10px;
+  
  &:hover {
   color: ${props => props.primary ? "white" : "#274428"};
   background: ${props => props.primary ? "#274428" : "white"};
