@@ -37,7 +37,7 @@ const RoomShow = (props) => {
         <Header>{props.room.name}</Header>
         <Center>
           <Modal
-            trigger={<Button onClick={() => setToggleEdit(!toggleEdit)}>{toggleEdit ? 'Exit' : 'Edit Room'}</Button>}
+            trigger={<Button onClick={() => setToggleEdit(!toggleEdit)}>Edit Room</Button>}
             toggle={setToggleEdit}
             open={toggleEdit}
             onClose={setClose}
