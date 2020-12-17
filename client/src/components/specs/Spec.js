@@ -4,7 +4,7 @@ import SpecForm from './SpecForm';
 
 import { SpecsContainer, Button } from '../../styles/PlantPageElements';
 import { Modal } from 'semantic-ui-react'
-import { FormHeader, FormHr } from '../../styles/RoomStyles'
+import { FormHeader, FormHr, Border, Ul } from '../../styles/RoomStyles'
 
 // import { Button } from '../../styles/SharedElements'
 
@@ -31,8 +31,8 @@ const Spec = (props) => {
 
   if (!props.specs) return null
   return (
-    <>
-      <ul>
+    <Border>
+      <Ul>
           {toggleEdit ? editView() :
             <>
               <SpecsContainer>
@@ -66,8 +66,8 @@ const Spec = (props) => {
             <Modal.Content>{editView()}</Modal.Content>
           </Modal>
           <Button onClick={() => props.deleteSpec(props.plant_id, props.id)}>Delete</Button>
-      </ul>
-    </>
+      </Ul>
+    </Border>
   )
 }
 

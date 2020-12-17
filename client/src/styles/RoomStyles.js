@@ -108,3 +108,13 @@ export const BorderLeft = styled.div`
   padding-bottom: 30px;
   margin-right: 30px;
 `
+
+export const Border = styled.div`
+  border: 2px solid #000;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+`
+
+export const Ul = styled.ul`
+  padding-top: 15px;
+`

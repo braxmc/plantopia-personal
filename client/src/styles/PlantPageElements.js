@@ -8,6 +8,7 @@ export const PlantWrap = styled.div`
   padding-top: 2em;
   height: auto;
   width: auto;
+  background-color: #EBEBEB;
 
   @media screen and (max-width: 1100px) {
     justify-content: space-around;
