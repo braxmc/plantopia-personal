@@ -41,6 +41,7 @@ export const PlantWrap = styled.div`
 
 export const PlantInfo = styled.p`
   color: #274428;
+  font-size: 20px;
 `
 
 export const Img = styled.img`

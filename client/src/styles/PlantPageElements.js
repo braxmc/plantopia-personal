@@ -4,7 +4,7 @@ export const PlantWrap = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding-top: 2em;
   height: auto;
   width: auto;
@@ -135,9 +135,10 @@ export const Info1 = styled.p`
 export const Image = styled.img`
   align-self: center;
   order: 2;
-  height: 575px;
-  width: 575px;
+  height: 550px;
+  width: 550px;
   border-radius: 20px;
+  margin-top: 20px;
 
   @media screen and (max-width: 1100px) {
     width: 450px;
