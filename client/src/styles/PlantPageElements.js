@@ -180,6 +180,7 @@ export const Routines = styled.p`
   font-size: 17px;
   display: flex;
   justify-content: flex-start;
+  padding-left: 10px;
 `
 
 export const SpecsContainer = styled.p`
@@ -188,6 +189,7 @@ export const SpecsContainer = styled.p`
   font-size: 17px;
   display: flex;
   justify-content: flex-start;
+  padding-left: 10px;
 `
 
 export const RightWrap = styled.div`

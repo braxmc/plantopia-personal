@@ -68,6 +68,7 @@ const PlantPage = (props) => {
           }
 
         </PlantInfo>
+        <Line />
         <Specs plant_id={props.plant.id} />
         <Line />
         <Routines plant_id={props.plant.id} />
