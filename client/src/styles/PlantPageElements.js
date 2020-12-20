@@ -6,7 +6,8 @@ export const PlantWrap = styled.div`
   align-items: flex-start;
   justify-content: space-evenly;
   padding-top: 2em;
-  height: auto;
+  height: 100%;
+  min-height: 100vh;
   width: auto;
   background-color: #EBEBEB;
 

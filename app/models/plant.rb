@@ -3,9 +3,9 @@ class Plant < ApplicationRecord
   has_many :routines, dependent: :destroy
   has_many :specs, dependent: :destroy
 
-  after_create :capitalize_name_and_sun
+  after_create :capitalize_name_and_species
 
-  def capitalize_name_and_sun
+  def capitalize_name_and_species
     update(name: name.capitalize, species: species.capitalize)
   end
 end
