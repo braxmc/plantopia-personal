@@ -10,7 +10,7 @@ class Api::PlantsController < ApplicationController
   end
 
   def create
-    plant = @room.plants.new(name: params[:name].capitalize(), species: params[:species].capitalize())
+    plant = @room.plants.new(plant_params)
 
     file = params[:file]
     

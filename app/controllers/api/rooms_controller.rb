@@ -1,7 +1,8 @@
 class Api::RoomsController < ApplicationController
 
   def index
-    render json: Room.all
+    room = Room.where(user_id: current_user.id)
+    render json: room, status: 200
   end
 
   def show
