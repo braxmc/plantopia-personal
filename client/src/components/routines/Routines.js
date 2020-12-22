@@ -3,9 +3,8 @@ import { RoutineConsumer } from '../../providers/RoutineProvider';
 import Routine from './Routine';
 import RoutineForm from './RoutineForm';
 
-import { Button } from '../../styles/SharedElements';
 import { Modal } from 'semantic-ui-react'
-import { RoutineButton, Info, RoutinesWrap1 } from '../../styles/PlantPageElements';
+import { RoutineButton, Info } from '../../styles/RoutineElements';
 import { FormHeader, FormHr, Center } from '../../styles/RoomStyles'
 
 const Routines = (props) => {

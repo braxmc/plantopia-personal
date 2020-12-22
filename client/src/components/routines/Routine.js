@@ -4,7 +4,7 @@ import RoutineForm from './RoutineForm';
 
 import Moment from 'react-moment';
 
-import { RoutineWrap, Routines, ButtonWrap, Button } from '../../styles/PlantPageElements'
+import { RoutineWrap, Routines, Button } from '../../styles/RoutineElements'
 import { FormHeader, FormHr, Border, Ul } from '../../styles/RoomStyles'
 import { Modal } from 'semantic-ui-react'
 
