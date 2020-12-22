@@ -3,8 +3,7 @@ import { SpecConsumer } from '../../providers/SpecProvider';
 import Spec from './Spec';
 import SpecForm from './SpecForm';
 
-import { Button } from '../../styles/SharedElements';
-import { RoutineButton, Info } from '../../styles/PlantPageElements';
+import { SpecButton, Info } from '../../styles/SpecElements';
 import { FormHeader, FormHr, Center } from '../../styles/RoomStyles'
 import { Modal } from 'semantic-ui-react'
 
@@ -35,7 +34,7 @@ const Specs = (props) => {
     <>
       <Center>
         <Modal
-          trigger={<RoutineButton onClick={() => setToggleForm(!toggleForm)}>Add specs</RoutineButton>}
+          trigger={<SpecButton onClick={() => setToggleForm(!toggleForm)}>Add specs</SpecButton>}
           toggle={setToggleForm}
           open={toggleForm}
           onClose={setClose}

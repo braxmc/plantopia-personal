@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { Form, FormInput, InputDiv, Button, CheckInput } from '../../styles/SmallFormElements';
+import { Form, FormInput, InputDiv, Button } from '../../styles/SmallFormElements';
 
 
 const SpecForm = (props) => {

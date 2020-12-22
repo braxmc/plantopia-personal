@@ -136,10 +136,10 @@ export const Info1 = styled.p`
 export const Image = styled.img`
   align-self: center;
   order: 2;
-  height: 550px;
-  width: 550px;
+  height: 450px;
+  width: 450px;
   border-radius: 20px;
-  margin-top: 20px;
+  margin-top: 50px;
 
   @media screen and (max-width: 1100px) {
     width: 450px;
@@ -176,15 +176,6 @@ export const RoutinesWrap1 = styled.div`
 `
 
 export const Routines = styled.p`
-  font-family: 'Josefin Sans', sans-serif;
-  color: #274428;
-  font-size: 17px;
-  display: flex;
-  justify-content: flex-start;
-  padding-left: 10px;
-`
-
-export const SpecsContainer = styled.p`
   font-family: 'Josefin Sans', sans-serif;
   color: #274428;
   font-size: 17px;

@@ -2,11 +2,10 @@ import React, {useState, useEffect} from 'react';
 import { SpecConsumer } from '../../providers/SpecProvider';
 import SpecForm from './SpecForm';
 
-import { SpecsContainer, Button } from '../../styles/PlantPageElements';
-import { Modal } from 'semantic-ui-react'
+import { SpecsContainer, Button } from '../../styles/SpecElements';
 import { FormHeader, FormHr, Border, Ul } from '../../styles/RoomStyles'
+import { Modal } from 'semantic-ui-react'
 
-// import { Button } from '../../styles/SharedElements'
 
 const Spec = (props) => {
   const [toggleEdit, setToggleEdit] = useState(false)
