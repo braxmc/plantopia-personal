@@ -64,7 +64,7 @@ export const RoomList = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: 30px;
   border-radius: 20px;
 `
@@ -118,3 +118,13 @@ export const Border = styled.div`
 export const Ul = styled.ul`
   padding-top: 15px;
 `
+
+export const Add = styled.p `
+font-family: 'Noto Sans TC', sans-serif;
+color: #274428;
+font-size: 60px;
+display: flex;
+justify-content: center;
+height: 200px;
+padding-top: 60px;
+`;
