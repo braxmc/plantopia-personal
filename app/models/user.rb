@@ -9,4 +9,12 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   include DeviseTokenAuth::Concerns::User
+
+  # will capitalize first letter of names
+
+  after_create :capitalize_user_names
+
+  def capitalize_user_names
+    update(first_name: first_name.capitalize, last_name: last_name.capitalize)
+  end
 end

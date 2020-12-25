@@ -3,26 +3,22 @@ import { AuthConsumer, } from "../../providers/AuthProvider";
 
 import { Form, BgWrapper, Header, ButtonWrapper, FormInput, Button, Img, HomeBg } from '../../styles/FormElements';
 
-// import { Img, HomeBg } from '../../styles/SharedElements';
-
-import Bg from '../../images/bg.jpg';
-
 class Login extends React.Component {
   state = { email: '', password: '' }
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { email, password, } = this.state;
-    this.props.auth.handleLogin({ email, password, }, this.props.history);
+    const { email, password } = this.state;
+    this.props.auth.handleLogin({ email, password }, this.props.history);
   }
 
   handleChange = (e) => {
-    const { name, value, } = e.target;
-    this.setState({ [name]: value, });
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
   }
 
   render() {
-    const { email, password, } = this.state;
+    const { email, password } = this.state;
 
     return (
       <BgWrapper>
