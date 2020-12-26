@@ -47,7 +47,6 @@ export const Border = styled.div`
   border: 2px solid #000;
   border-radius: 10px;
   background-color: #FFFFFF;
-  min-width: 400px;
 `
 
 export const Routines = styled.p`

@@ -3,8 +3,8 @@ import styled from 'styled-components'
 export const SpecButton = styled.button`
 font-family: 'Noto Sans TC', sans-serif;
 /* Adapt the colors based on primary prop */
-background: ${props => props.primary ? "white" : "#274428"};
-color: ${props => props.primary ? "#274428" : "white"};
+background: #274428;
+color: white;
 font-size: 1.3em;
 margin: 10px;
 padding: 0.25em 1em;
@@ -17,8 +17,9 @@ align-self: center;
 justify-content: center;
 
  &:hover {
-  color: ${props => props.primary ? "white" : "#274428"};
-  background: ${props => props.primary ? "#274428" : "white"};
+  color: #274428;
+  background: white;
+  cursor: pointer;
  }
 `;
 
@@ -40,8 +41,8 @@ export const Info = styled.p`
 export const Button = styled.button`
 font-family: 'Noto Sans TC', sans-serif;
 /* Adapt the colors based on primary prop */
-background: ${props => props.primary ? "white" : "#274428"};
-color: ${props => props.primary ? "#274428" : "white"};
+background: #274428;
+color: white;
 font-size: 1.3em;
 padding: 0.25em 1em;
 border: 2px solid #274428;
@@ -51,8 +52,9 @@ width: 7em;
 margin: 15px 10px;
 
  &:hover {
-  color: ${props => props.primary ? "white" : "#274428"};
-  background: ${props => props.primary ? "#274428" : "white"};
+  color: #274428;
+  background: white;
+  cursor: pointer;
  }
 `;
 
@@ -68,7 +70,7 @@ export const Border = styled.div`
   border: 2px solid #000;
   border-radius: 10px;
   background-color: #FFFFFF;
-  width: 500px;
+
 `
 
 export const Center = styled.div`
