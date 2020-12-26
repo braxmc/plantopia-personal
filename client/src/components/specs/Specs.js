@@ -3,7 +3,7 @@ import { SpecConsumer } from '../../providers/SpecProvider';
 import Spec from './Spec';
 import SpecForm from './SpecForm';
 
-import { SpecButton, Info } from '../../styles/SpecElements';
+import { SpecButton, Info, Border } from '../../styles/SpecElements';
 import { FormHeader, FormHr, Center } from '../../styles/RoomStyles'
 import { Modal } from 'semantic-ui-react'
 
@@ -19,14 +19,18 @@ const Specs = (props) => {
   const listSpecs = () => {
     if (props.specs.length !== 0) {
       return (
-        <ul>
+        <>
           { props.specs.map( s =>
             <Spec {...s} /> 
           )}
-        </ul>
+        </>
       )
     } else {
-      return (<Info>No Specs</Info>)
+      return (
+      <Border>
+        <Info>No Specs Added</Info>
+      </Border>
+      )
     }
   }
 

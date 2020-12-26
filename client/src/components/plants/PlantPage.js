@@ -69,7 +69,7 @@ const PlantPage = (props) => {
 
         </PlantInfo>
         <Specs plant_id={props.plant.id} />
-        <Line />
+        {/* <Line /> */}
         <Routines plant_id={props.plant.id} />
       </LeftWrap>
     </PlantWrap>

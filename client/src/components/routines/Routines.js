@@ -4,7 +4,7 @@ import Routine from './Routine';
 import RoutineForm from './RoutineForm';
 
 import { Modal } from 'semantic-ui-react'
-import { RoutineButton, Info } from '../../styles/RoutineElements';
+import { RoutineButton, Info, Border } from '../../styles/RoutineElements';
 import { FormHeader, FormHr, Center } from '../../styles/RoomStyles'
 
 const Routines = (props) => {
@@ -19,14 +19,18 @@ const Routines = (props) => {
   const listRoutines = () => {
     if (props.routines.length !== 0) {
       return (
-        <ul>
+        <>
           { props.routines.map( r =>
             <Routine {...r} />
           )}
-        </ul>
+        </>
       )
     } else {
-      return (<Info>No Routines</Info>)
+      return (
+        <Border>
+          <Info>No Specs Added</Info>
+        </Border>
+      )
     }
   } 
 

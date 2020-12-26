@@ -4,8 +4,8 @@ import RoutineForm from './RoutineForm';
 
 import Moment from 'react-moment';
 
-import { RoutineWrap, Routines, Button } from '../../styles/RoutineElements'
-import { FormHeader, FormHr, Border, Ul } from '../../styles/RoomStyles'
+import { RoutineWrap, Routines, Button, Center, CenterButton } from '../../styles/RoutineElements'
+import { FormHeader, FormHr, Border } from '../../styles/RoomStyles'
 import { Modal } from 'semantic-ui-react'
 
 const Routine = (props) => {
@@ -31,7 +31,7 @@ const Routine = (props) => {
   if (!props.routines) return null
   return (
     <Border>
-      <Ul>
+      <Center>
         
         {
           <RoutineWrap>
@@ -56,6 +56,8 @@ const Routine = (props) => {
           </Routines>
           </RoutineWrap>
         }
+          </Center>
+        <CenterButton>
         <Modal
           trigger={<Button onClick={() => setToggleEdit(!toggleEdit)}>Edit</Button>}
           toggleEdit={setToggleEdit}
@@ -67,7 +69,7 @@ const Routine = (props) => {
           <Modal.Content>{editView()}</Modal.Content>
         </Modal>   
             <Button onClick={() => props.deleteRoutine(props.plant_id, props.id)}>Delete</Button>
-      </Ul>
+        </CenterButton>
     </Border>
   )
 }

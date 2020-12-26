@@ -29,7 +29,8 @@ export const Info = styled.p`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 ;
+  margin: 0;
+  padding: 10px;
 
   @media screen and (max-width: 900px) {
     display: none;
@@ -63,4 +64,23 @@ export const SpecsContainer = styled.p`
   justify-content: flex-start;
   padding-left: 10px;
 `
+export const Border = styled.div`
+  border: 2px solid #000;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  width: 500px;
+`
 
+export const Center = styled.div`
+  display: flex-start;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+  padding-left: 20px;
+`
+
+export const CenterButton = styled.div`
+  display: flex;
+  justify-content: center;
+`

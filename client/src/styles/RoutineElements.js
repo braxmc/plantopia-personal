@@ -7,7 +7,8 @@ export const Info = styled.p`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 ;
+  margin: 0;
+  padding: 10px;
 
   @media screen and (max-width: 900px) {
     display: none;
@@ -42,6 +43,13 @@ export const RoutineWrap = styled.div`
   justify-content: center;
 `
 
+export const Border = styled.div`
+  border: 2px solid #000;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  min-width: 400px;
+`
+
 export const Routines = styled.p`
   font-family: 'Josefin Sans', sans-serif;
   color: #274428;
@@ -69,3 +77,17 @@ margin: 15px 10px;
   background: ${props => props.primary ? "#274428" : "white"};
  }
 `;
+
+export const Center = styled.div`
+  display: flex-start;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+  padding-left: 20px;
+`
+
+export const CenterButton = styled.div`
+  display: flex;
+  justify-content: center;
+`

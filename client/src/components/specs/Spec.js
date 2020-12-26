@@ -2,8 +2,8 @@ import React, {useState, useEffect} from 'react';
 import { SpecConsumer } from '../../providers/SpecProvider';
 import SpecForm from './SpecForm';
 
-import { SpecsContainer, Button } from '../../styles/SpecElements';
-import { FormHeader, FormHr, Border, Ul } from '../../styles/RoomStyles'
+import { SpecsContainer, Button, Center, CenterButton } from '../../styles/SpecElements';
+import { FormHeader, FormHr, Border } from '../../styles/RoomStyles'
 import { Modal } from 'semantic-ui-react'
 
 
@@ -31,7 +31,7 @@ const Spec = (props) => {
   if (!props.specs) return null
   return (
     <Border>
-      <Ul>
+      <Center>
           {toggleEdit ? editView() :
             <>
               <SpecsContainer>
@@ -54,6 +54,8 @@ const Spec = (props) => {
               </SpecsContainer>
             </>
           }
+            </Center>
+          <CenterButton>
           <Modal
             trigger={<Button onClick={() => setToggleEdit(!toggleEdit)}>Edit</Button>}
             toggleEdit={setToggleEdit}
@@ -65,7 +67,7 @@ const Spec = (props) => {
             <Modal.Content>{editView()}</Modal.Content>
           </Modal>
           <Button onClick={() => props.deleteSpec(props.plant_id, props.id)}>Delete</Button>
-      </Ul>
+          </CenterButton>
     </Border>
   )
 }
