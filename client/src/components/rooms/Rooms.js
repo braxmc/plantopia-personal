@@ -6,7 +6,7 @@ import Room from  './Room';
 
 import { Modal } from 'semantic-ui-react'
 
-import { Button, RoomList, Header, Center, Hr, FormHeader, FormHr, BorderLeft, Add } from '../../styles/RoomStyles'
+import { Button, RoomList, Header, Center, Hr, FormHeader, FormHr, BorderLeft, Add, CenterCards } from '../../styles/RoomStyles'
 import { Gray } from '../../styles/RoomShowElements'
 
 
@@ -24,11 +24,13 @@ const Rooms = (props) => {
     if (props.rooms.length !== 0) {
       return (
           <BorderLeft>
+            <CenterCards>
             <RoomList>
                 { props.rooms.map( r =>
               <Room {...r} />
                   )}
             </RoomList>
+            </CenterCards>
           </BorderLeft>
 
       )

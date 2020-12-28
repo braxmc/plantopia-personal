@@ -35,9 +35,9 @@ const Routine = (props) => {
         
         {
           <RoutineWrap>
-          <Routines>Time:
+          {/* <Routines>Time:
              <Moment format='H:MM A'>{props.routine_time}</Moment>
-          </Routines>
+          </Routines> */}
           <Routines>
             Action: {props.action} -
             Sunday: {props.sunday ? 'true' : 'false'}

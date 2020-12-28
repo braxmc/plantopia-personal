@@ -64,7 +64,7 @@ export const RoomList = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   margin-top: 30px;
   border-radius: 20px;
 `
@@ -72,6 +72,12 @@ export const Center = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 30px;
+`
+
+export const CenterCards = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
 `
 
 export const Hr = styled.hr`
