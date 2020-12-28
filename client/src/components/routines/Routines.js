@@ -28,7 +28,7 @@ const Routines = (props) => {
     } else {
       return (
         <Border>
-          <Info>No Specs Added</Info>
+          <Info>No Routines Added</Info>
         </Border>
       )
     }
