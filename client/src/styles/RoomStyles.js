@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { Link } from 'react-router-dom'
+
 export const Header = styled.header `
 font-family: 'Noto Sans TC', sans-serif;
 color: #274428;
@@ -134,3 +136,12 @@ justify-content: center;
 height: 200px;
 padding-top: 60px;
 `;
+
+export const BackLink = styled(Link)`
+  color: #274428;
+  text-decoration: underline;
+  padding-left: 2px;
+  font-size: 10px;
+  display: flex;
+  align-items: flex-start;
+`

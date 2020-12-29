@@ -8,7 +8,7 @@ import { Modal } from 'semantic-ui-react'
 
 import { Button } from '../../styles/SharedElements';
 
-import { PlantWrap, PlantInfo, Info, Image, ButtonWrap, InfoTitle, RightWrap, LeftWrap, Line, InfoTitle1, Info1, Line1 } from '../../styles/PlantPageElements';
+import { PlantWrap, PlantInfo, Info, Image, ButtonWrap, InfoTitle, RightWrap, LeftWrap, Line, InfoTitle1, Info1, Line1, BackLink, LinkWrap } from '../../styles/PlantPageElements';
 
 const PlantPage = (props) => {
   const [toggleEdit, setToggleEdit] = useState(false)
@@ -33,7 +33,11 @@ const PlantPage = (props) => {
 
   if (!props.plant) return null
   return (
-    <PlantWrap>
+<>
+      <LinkWrap>
+        <BackLink to='/rooms/:id'>Go Back</BackLink>
+      </LinkWrap>
+<PlantWrap>
       <RightWrap>
         <InfoTitle1 InfoTitle>{props.plant.name}</InfoTitle1>
         <Info1>{props.plant.species}</Info1>
@@ -73,6 +77,7 @@ const PlantPage = (props) => {
         <Routines plant_id={props.plant.id} />
       </LeftWrap>
     </PlantWrap>
+</>
   )
  
 }

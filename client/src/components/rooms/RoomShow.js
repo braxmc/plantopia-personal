@@ -4,7 +4,7 @@ import RoomForm from './RoomForm';
 import Plants from '../plants/Plants';
 
 import { Button, Button1, Header, Gray } from '../../styles/RoomShowElements'
-import { Center, Hr, FormHeader, FormHr } from '../../styles/RoomStyles'
+import { Center, Hr, FormHeader, FormHr, BackLink } from '../../styles/RoomStyles'
 import { Modal } from 'semantic-ui-react'
 
 
@@ -34,6 +34,7 @@ const RoomShow = (props) => {
     return (
       <div>
       <Gray>
+        <BackLink to='/profile'>Go Back</BackLink>
         <Header>{props.room.name}</Header>
         <Center>
           <Modal

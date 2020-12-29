@@ -20,7 +20,6 @@ const Navbar = (props) => {
         {/* <Link to='/'>Home</Link> */}
         {/* <Link to='/rooms'>Rooms</Link> */}
         <NavLink to='/profile'>Profile</NavLink>
-        {/* <Link to='/'>Log Out</Link> */}
         <NavLink onClick={ () => handleLogout(props.history)} to='/'>Log Out</NavLink>
       </Right>
       // </div>
@@ -28,17 +27,15 @@ const Navbar = (props) => {
     } else {
       return (
         <Right>
-        <NavLink to='/'>Home</NavLink>
-        <NavLink to='/login'>Log In</NavLink>
-        <NavLink to='/register'>Register</NavLink>
+          <NavLink to='/'>Home</NavLink>
+          <NavLink to='/login'>Log In</NavLink>
+          <NavLink to='/register'>Register</NavLink>
         </Right>
       )
     } 
   }
- 
-// useEffect(() =>{
 
-// },[])
+// if statement makes logo take you to home or profile depending on login status
 
 if ( props.auth.user === null ) {
   return (

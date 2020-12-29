@@ -47,7 +47,7 @@ color: #274428;
 font-size: 50px;
 display: flex;
 justify-content: center;
-padding-top: 40px;
+padding-top: 35px;
 `;
 
 export const Gray = styled.div`

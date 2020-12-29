@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
+import { Link } from 'react-router-dom'
+
 export const PlantWrap = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-evenly;
-  padding-top: 2em;
+
   height: 100%;
   min-height: 100vh;
   width: auto;
@@ -192,4 +194,15 @@ export const Line1 = styled.hr`
   }
 `
 
+export const BackLink = styled(Link)`
+  color: #274428;
+  text-decoration: underline;
+  font-size: 10px;
+`
 
+export const LinkWrap = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  position: fixed;
+  padding-left: 2px;
+`
