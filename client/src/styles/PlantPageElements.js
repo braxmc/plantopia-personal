@@ -202,7 +202,7 @@ export const BackLink = styled(Link)`
 
 export const LinkWrap = styled.div`
   display: flex;
+  background-color: #EBEBEB;
   justify-content: flex-start;
-  position: fixed;
   padding-left: 2px;
 `
