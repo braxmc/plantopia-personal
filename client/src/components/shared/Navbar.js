@@ -40,14 +40,29 @@ const Navbar = (props) => {
 
 // },[])
 
+if ( props.auth.user === null ) {
   return (
     <Wrap>
         <Left>
-          <Img src={Logo} alt='logo' />
+          <NavLink to='/'>
+            <Img src={Logo} alt='logo' />
+          </NavLink>
         </Left>
       {navAuth()}
     </Wrap>
   )
+} else {
+  return (
+    <Wrap>
+        <Left>
+          <NavLink to='/profile'>
+            <Img src={Logo} alt='logo' />
+          </NavLink>
+        </Left>
+      {navAuth()}
+    </Wrap>
+  )
+}
 }
 
 export const ConnectedNavbar = (props) => {
