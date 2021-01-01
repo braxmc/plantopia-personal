@@ -23,7 +23,8 @@ const Rooms = (props) => {
   const listRooms = () => {
     if (props.rooms.length !== 0) {
       return (
-          <BorderLeft>
+          <Center>
+            <BorderLeft>
             <CenterCards>
             <RoomList>
                 { props.rooms.map( r =>
@@ -31,7 +32,8 @@ const Rooms = (props) => {
                   )}
             </RoomList>
             </CenterCards>
-          </BorderLeft>
+            </BorderLeft>
+          </Center>
 
       )
     } else {

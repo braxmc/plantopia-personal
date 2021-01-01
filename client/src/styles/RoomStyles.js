@@ -115,6 +115,8 @@ export const BorderLeft = styled.div`
   background-color: #FFFFFF;
   padding-bottom: 30px;
   margin-right: 30px;
+  max-width: 600px;
+  min-width: 600px;
 `
 
 export const Border = styled.div`
