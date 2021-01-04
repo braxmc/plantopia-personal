@@ -77,7 +77,7 @@ const RoutineForm = (props) => {
   return (
     <>
       <Form onSubmit={handleSubmit}>
-        <InputDiv>
+        {/* <InputDiv>
           Time-
           <FormInput 
             type='time'
@@ -88,7 +88,7 @@ const RoutineForm = (props) => {
             value={Time}
             onChange={handleTimeChange}
           />
-        </InputDiv>
+        </InputDiv> */}
         <InputDiv>
           Action-
           <FormInput 
