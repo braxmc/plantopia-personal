@@ -43,3 +43,11 @@ export const DropDiv = styled.div`
   align-self: center;
   padding-bottom: 10px;
 `
+
+export const FormHr = styled.hr`
+  height: 2px;
+  color: #274428;
+  background-color: #274428;
+  margin: 0;
+  padding: 0;
+`

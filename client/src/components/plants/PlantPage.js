@@ -8,7 +8,8 @@ import { Modal } from 'semantic-ui-react'
 
 import { Button } from '../../styles/SharedElements';
 
-import { PlantWrap, PlantInfo, Info, Image, ButtonWrap, InfoTitle, RightWrap, LeftWrap, Line, InfoTitle1, Info1, Line1, BackLink, LinkWrap } from '../../styles/PlantPageElements';
+import { PlantWrap, PlantInfo, Info, Image, ButtonWrap, InfoTitle, RightWrap, LeftWrap, Line, InfoTitle1, Info1, Line1, BackLink, LinkWrap, Exit, ExitWrap } from '../../styles/PlantPageElements';
+import { FormHeader, FormHr } from '../../styles/RoomStyles'
 
 const PlantPage = (props) => {
   const [toggleEdit, setToggleEdit] = useState(false)
@@ -49,7 +50,13 @@ const PlantPage = (props) => {
                   open={toggleEdit}
                   onClose={setClose}
                 >
-                  <Modal.Header>Edit Plant</Modal.Header>
+                  <ExitWrap>
+                    <Exit onClick={() => setToggleEdit(!toggleEdit)}>
+                      ×
+                    </Exit>
+                  </ExitWrap>
+                  <FormHeader>Edit Plant</FormHeader>
+                  <FormHr/>
                   <Modal.Content>
                     <PlantForm {...props} toggleEdit={setToggleEdit}/>
                   </Modal.Content>

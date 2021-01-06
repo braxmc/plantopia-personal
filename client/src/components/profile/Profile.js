@@ -8,7 +8,7 @@ import Dropzone from 'react-dropzone'
 
 import { UserWrap, Wrap, Button, Name, ImgWrap, Img, Center, Header, RoomWrap, Exit, ExitWrap } from '../../styles/ProfileStyle'
 import { Modal } from 'semantic-ui-react';
-import { Wrapper, Form, FormInput } from '../../styles/RoomFormStyles'
+import { Wrapper, Form, FormInput, FormHr } from '../../styles/RoomFormStyles'
 
 const defaultImage = 'https://d30y9cdsu7xlg0.cloudfront.net/png/15724-200.png';
 
@@ -154,6 +154,7 @@ const Profile = (props) => {
               </Exit>
           </ExitWrap>
         <Header>Edit Profile</Header>
+        <FormHr />
         <Modal.Content>
           {editView()}
         </Modal.Content>

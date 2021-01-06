@@ -206,3 +206,14 @@ export const LinkWrap = styled.div`
   justify-content: flex-start;
   padding-left: 2px;
 `
+
+export const Exit = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+`
+
+export const ExitWrap = styled.div`
+  display: flex;
+  background-color: #EBEBEB;
+`
