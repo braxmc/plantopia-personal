@@ -4,7 +4,7 @@ import Routine from './Routine';
 import RoutineForm from './RoutineForm';
 
 import { Modal } from 'semantic-ui-react'
-import { RoutineButton, Info, Border } from '../../styles/RoutineElements';
+import { RoutineButton, Info, Border, Exit, ExitWrap } from '../../styles/RoutineElements';
 import { FormHeader, FormHr, Center } from '../../styles/RoomStyles'
 
 const Routines = (props) => {
@@ -43,6 +43,11 @@ const Routines = (props) => {
           open={toggleForm}
           onClose={setClose}         
         >
+          <ExitWrap>
+              <Exit onClick={() => setToggleForm(!toggleForm)}>
+                ×
+              </Exit>
+          </ExitWrap>
           <FormHeader>Add Routine</FormHeader>
           <FormHr />
           <Modal.Content>

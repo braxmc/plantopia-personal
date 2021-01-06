@@ -4,7 +4,7 @@ import RoutineForm from './RoutineForm';
 
 import Moment from 'react-moment';
 
-import { RoutineWrap, Routines, Button, Center, CenterButton } from '../../styles/RoutineElements'
+import { RoutineWrap, Routines, Button, Center, CenterButton, Exit, ExitWrap } from '../../styles/RoutineElements'
 import { FormHeader, FormHr, Border } from '../../styles/RoomStyles'
 import { Modal } from 'semantic-ui-react'
 
@@ -64,6 +64,11 @@ const Routine = (props) => {
           open={toggleEdit}
           onClose={setClose}
         >
+          <ExitWrap>
+              <Exit onClick={() => setToggleEdit(!toggleEdit)}>
+                ×
+              </Exit>
+          </ExitWrap>
           <FormHeader>Edit Routine</FormHeader>
           <FormHr />
           <Modal.Content>{editView()}</Modal.Content>
