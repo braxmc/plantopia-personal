@@ -3,7 +3,7 @@ import { SpecConsumer } from '../../providers/SpecProvider';
 import Spec from './Spec';
 import SpecForm from './SpecForm';
 
-import { SpecButton, Info, Border } from '../../styles/SpecElements';
+import { SpecButton, Info, Border, Exit, ExitWrap } from '../../styles/SpecElements';
 import { FormHeader, FormHr, Center } from '../../styles/RoomStyles'
 import { Modal } from 'semantic-ui-react'
 
@@ -43,6 +43,11 @@ const Specs = (props) => {
           open={toggleForm}
           onClose={setClose}
         >
+          <ExitWrap>
+              <Exit onClick={() => setToggleForm(!toggleForm)}>
+                ×
+              </Exit>
+          </ExitWrap>
           <FormHeader>Add Specification's</FormHeader>
           <FormHr />
           <Modal.Content>
