@@ -88,7 +88,7 @@ export const Header = styled.div`
   font-family: 'Noto Sans TC', sans-serif;
   color: #274428;
   font-size: 30px;
-  padding: 15px 0;
+  padding-bottom: 15px;
   background-color: #EBEBEB;
 `
 
@@ -110,4 +110,15 @@ export const RoomWrap = styled.div`
   display: flex;
   flex-direction: column;
   width: 100vw;
+`
+
+export const Exit = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+`
+
+export const ExitWrap = styled.div`
+  display: flex;
+  background-color: #EBEBEB;
 `

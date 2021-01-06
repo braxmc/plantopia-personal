@@ -6,7 +6,7 @@ import Rooms from '../rooms/Rooms'
 
 import Dropzone from 'react-dropzone'
 
-import { UserWrap, Wrap, Button, Name, ImgWrap, Img, Center, Header, Hr, RoomWrap } from '../../styles/ProfileStyle'
+import { UserWrap, Wrap, Button, Name, ImgWrap, Img, Center, Header, RoomWrap, Exit, ExitWrap } from '../../styles/ProfileStyle'
 import { Modal } from 'semantic-ui-react';
 import { Wrapper, Form, FormInput } from '../../styles/RoomFormStyles'
 
@@ -148,6 +148,11 @@ const Profile = (props) => {
         open={toggleEdit}
         onClose={setClose}
         >
+          <ExitWrap>
+              <Exit onClick={() => setToggleEdit(!toggleEdit)}>
+                ×
+              </Exit>
+          </ExitWrap>
         <Header>Edit Profile</Header>
         <Modal.Content>
           {editView()}
