@@ -4,7 +4,7 @@ import { PlantConsumer } from '../../providers/PlantProvider';
 import PlantForm from './PlantForm';
 import Plant from './Plant'
 
-import { Button, Row, Center } from '../../styles/PlantsStyles'
+import { Button, Row, Center, Exit, ExitWrap } from '../../styles/PlantsStyles'
 import { FormHeader, FormHr } from '../../styles/RoomStyles'
 import { Modal } from 'semantic-ui-react'
 
@@ -42,6 +42,11 @@ const Plants = (props) => {
         open={toggleForm}
         onClose={setClose}
       >
+        <ExitWrap>
+          <Exit onClick={() => setToggleForm(!toggleForm)}>
+            ×
+          </Exit>
+        </ExitWrap>
         <FormHeader>Add Plant</FormHeader>
         <FormHr />
         <Modal.Content>

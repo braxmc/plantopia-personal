@@ -76,3 +76,14 @@ export const Center = styled.div`
   justify-content: center;
   margin-top: 20px;
 `
+
+export const Exit = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+`
+
+export const ExitWrap = styled.div`
+  display: flex;
+  background-color: #EBEBEB;
+`
