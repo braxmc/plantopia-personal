@@ -34,7 +34,7 @@ export const Info = styled.p`
   padding: 10px;
 
   @media screen and (max-width: 900px) {
-    display: none;
+    /* display: none; */
   }
 `
 

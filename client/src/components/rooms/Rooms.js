@@ -6,7 +6,7 @@ import Room from  './Room';
 
 import { Modal } from 'semantic-ui-react'
 
-import { Button, RoomList, Header, Center, Hr, FormHeader, FormHr, BorderLeft, Add, CenterCards } from '../../styles/RoomStyles'
+import { Button, RoomList, Header, Center, Hr, FormHeader, FormHr, BorderLeft, Add, CenterCards, Exit, ExitWrap } from '../../styles/RoomStyles'
 import { Gray } from '../../styles/RoomShowElements'
 
 
@@ -56,6 +56,11 @@ const Rooms = (props) => {
             open={toggleForm}
             onClose={setClose}
           >
+            <ExitWrap>
+              <Exit onClick={() => setToggleForm(!toggleForm)}>
+                ×
+              </Exit>
+            </ExitWrap>
             <FormHeader>Add Room</FormHeader>
             <FormHr />
             <Modal.Content>

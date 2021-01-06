@@ -11,7 +11,7 @@ export const Info = styled.p`
   padding: 10px;
 
   @media screen and (max-width: 900px) {
-    display: none;
+    /* display: none; */
   }
 `
 
@@ -48,6 +48,10 @@ export const Border = styled.div`
   border-radius: 10px;
   background-color: #FFFFFF;
   width: 325px;
+
+  @media screen and (max-width: 900px) {
+    margin-bottom: 20px;
+  }
 `
 
 export const Routines = styled.p`

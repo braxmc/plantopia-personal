@@ -97,7 +97,7 @@ export const FormHeader = styled.div`
   font-family: 'Noto Sans TC', sans-serif;
   color: #274428;
   font-size: 30px;
-  padding: 15px 0;
+  padding-bottom: 15px;
   background-color: #EBEBEB;
 `
 
@@ -145,4 +145,15 @@ export const BackLink = styled(Link)`
   font-size: 10px;
   display: flex;
   align-items: flex-start;
+`
+
+export const Exit = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+`
+
+export const ExitWrap = styled.div`
+  display: flex;
+  background-color: #EBEBEB;
 `
