@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { SpecConsumer } from '../../providers/SpecProvider';
 import SpecForm from './SpecForm';
 
-import { SpecsContainer, Button, Center, CenterButton } from '../../styles/SpecElements';
+import { SpecsContainer, Button, Center, CenterButton, Exit, ExitWrap } from '../../styles/SpecElements';
 import { FormHeader, FormHr, Border } from '../../styles/RoomStyles'
 import { Modal } from 'semantic-ui-react'
 
@@ -62,6 +62,11 @@ const Spec = (props) => {
             open={toggleEdit}
             onClose={setClose}
           >
+            <ExitWrap>
+              <Exit onClick={() => setToggleEdit(!toggleEdit)}>
+                ×
+              </Exit>
+            </ExitWrap>
             <FormHeader>Edit Specification's</FormHeader>
             <FormHr />
             <Modal.Content>{editView()}</Modal.Content>
