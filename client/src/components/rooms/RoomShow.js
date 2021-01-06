@@ -3,7 +3,7 @@ import { RoomConsumer } from '../../providers/RoomProvider';
 import RoomForm from './RoomForm';
 import Plants from '../plants/Plants';
 
-import { Button, Button1, Header, Gray } from '../../styles/RoomShowElements'
+import { Button, Button1, Header, Gray, Exit, ExitWrap } from '../../styles/RoomShowElements'
 import { Center, Hr, FormHeader, FormHr, BackLink } from '../../styles/RoomStyles'
 import { Modal } from 'semantic-ui-react'
 
@@ -43,6 +43,11 @@ const RoomShow = (props) => {
             open={toggleEdit}
             onClose={setClose}
           >
+            <ExitWrap>
+              <Exit onClick={() => setToggleEdit(!toggleEdit)}>
+                ×
+              </Exit>
+            </ExitWrap>
             <FormHeader>Edit Room</FormHeader>
             <FormHr />
             <Modal.Content>

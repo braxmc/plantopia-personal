@@ -53,3 +53,14 @@ padding-top: 35px;
 export const Gray = styled.div`
   background-color: #EBEBEB;
 `
+
+export const Exit = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+`
+
+export const ExitWrap = styled.div`
+  display: flex;
+  background-color: #EBEBEB;
+`
