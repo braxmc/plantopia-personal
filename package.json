@@ -14,15 +14,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/devpointlabs/plantopia.git"
+    "url": "git+https://github.com/braxmc/plantopia-personal.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/devpointlabs/plantopia/issues"
+    "url": "https://github.com/braxmc/plantopia-personal/issues"
   },
-  "homepage": "https://github.com/devpointlabs/plantopia#readme",
+  "homepage": "https://github.com/braxmc/plantopia-personal#readme",
   "dependencies": {
     "react-dropzone": "^11.2.4"
   }
