@@ -13,7 +13,7 @@ const Navbar = (props) => {
 
   const navAuth = () => {
     const {user, handleLogout} = props.auth;
-    if (user) {
+    if (user, props.auth.user) {
       return (
       // <div>Hello {user.firstName}!
       <Right>
