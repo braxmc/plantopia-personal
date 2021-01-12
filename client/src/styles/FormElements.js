@@ -69,9 +69,8 @@ export const HomeBg = styled.div`
 
 export const Button = styled.button`
 font-family: 'Noto Sans TC', sans-serif;
-/* Adapt the colors based on primary prop */
-color: ${props => props.primary ? "white" : "#274428"};
-background: ${props => props.primary ? "#274428" : "white"};
+color: white;
+background: #274428;
 font-size: 1.3em;
 padding: 0.25em 1em;
 border: 2px solid #3A5A40;
@@ -80,8 +79,8 @@ height: 2em;
 width: 7em;
 
  &:hover {
-  background: ${props => props.primary ? "white" : "#274428"};
-  color: ${props => props.primary ? "#274428" : "white"};
+  background: white;
+  color: #274428;
  }
 `;
 

@@ -14,6 +14,7 @@ export const Button = styled.button`
   margin-top: 10px;
   margin-bottom: 10px;
   margin-right: 10px;
+  cursor: pointer;
 
  &:hover {
   color: ${props => props.primary ? "white" : "#274428"};
@@ -23,9 +24,8 @@ export const Button = styled.button`
 
 export const Button1 = styled.button`
   font-family: 'Noto Sans TC', sans-serif;
-  /* Adapt the colors based on primary prop */
-  background: ${props => props.primary ? "white" : "#274428"};
-  color: ${props => props.primary ? "#274428" : "white"};
+  background: #274428;
+  color: white;
   font-size: 1.3em;
   padding: 0.25em 1em;
   border: 2px solid #274428;
@@ -34,10 +34,11 @@ export const Button1 = styled.button`
   width: 8em;
   margin-top: 10px;
   margin-bottom: 10px;
+  cursor: pointer;
 
  &:hover {
-  color: ${props => props.primary ? "white" : "#274428"};
-  background: ${props => props.primary ? "#274428" : "white"};
+  color: #274428;
+  background: white;
  }
 `;
 

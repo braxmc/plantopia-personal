@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const SpecButton = styled.button`
 font-family: 'Noto Sans TC', sans-serif;
-/* Adapt the colors based on primary prop */
 background: #274428;
 color: white;
 font-size: 1.3em;
@@ -15,11 +14,11 @@ align-items: center;
 display: flex;
 align-self: center;
 justify-content: center;
+cursor: pointer;
 
  &:hover {
   color: #274428;
   background: white;
-  cursor: pointer;
  }
 `;
 
@@ -40,7 +39,6 @@ export const Info = styled.p`
 
 export const Button = styled.button`
 font-family: 'Noto Sans TC', sans-serif;
-/* Adapt the colors based on primary prop */
 background: #274428;
 color: white;
 font-size: 1.3em;

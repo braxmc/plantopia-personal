@@ -3,6 +3,8 @@ import { AuthConsumer, } from "../../providers/AuthProvider";
 
 import { Form, BgWrapper, Header, ButtonWrapper, FormInput, Button, Img, HomeBg } from '../../styles/FormElements';
 
+import { Input, Label, LoginButton } from '../../styles/SharedElements'
+
 class Login extends React.Component {
   state = { email: '', password: '' }
 
@@ -24,7 +26,8 @@ class Login extends React.Component {
       <BgWrapper>
         <Header>Login</Header>
         <Form onSubmit={this.handleSubmit}>
-          <FormInput
+        <Label>Email</Label>
+          <Input
             label="Email"
             autoFocus
             required         
@@ -33,7 +36,8 @@ class Login extends React.Component {
             placeholder='Email'
             onChange={this.handleChange}
           />
-          <FormInput
+          <Label>Password</Label>
+          <Input
             label="Password"
             required
             name='password'
@@ -43,7 +47,7 @@ class Login extends React.Component {
             onChange={this.handleChange}
           />
           <ButtonWrapper>
-            <Button primary type='submit'>Submit</Button>
+            <LoginButton primary type='submit'>Submit</LoginButton>
           </ButtonWrapper>
         </Form>
       </BgWrapper>

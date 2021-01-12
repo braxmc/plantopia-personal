@@ -10,15 +10,17 @@ import Logo from '../../images/logo.png';
 
 const Navbar = (props) => {
 
+  useEffect(() => {
+    
+  }, [props.auth])
+
 
   const navAuth = () => {
     const {user, handleLogout} = props.auth;
-    if (user, props.auth.user) {
+    if (user) {
       return (
       // <div>Hello {user.firstName}!
       <Right>
-        {/* <Link to='/'>Home</Link> */}
-        {/* <Link to='/rooms'>Rooms</Link> */}
         <NavLink to='/profile'>Profile</NavLink>
         <NavLink onClick={ () => handleLogout(props.history)} to='/'>Log Out</NavLink>
       </Right>

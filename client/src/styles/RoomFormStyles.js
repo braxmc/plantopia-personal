@@ -15,18 +15,18 @@ export const Form = styled.form`
 export const Button = styled.button`
   width: 40vw;
   font-family: 'Noto Sans TC', sans-serif;
-  /* Adapt the colors based on primary prop */
-  background: ${props => props.primary ? "white" : "#274428"};
-  color: ${props => props.primary ? "#274428" : "white"};
+  background: #274428;
+  color: white;
   font-size: 30px;
   padding: 0.25em 1em;
   border: 2px solid #274428;
   border-radius: 10px;
   height: auto;
+  cursor: pointer;
 
  &:hover {
-  color: ${props => props.primary ? "white" : "#274428"};
-  background: ${props => props.primary ? "#274428" : "white"};
+  color: #274428;
+  background: white;
  }
 `;
 
