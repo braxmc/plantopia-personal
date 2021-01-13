@@ -41,7 +41,7 @@ const PlantProvider = ({children}) => {
     let data = new FormData();
     data.append('file', plant.file);
 
-    axios.put(`/api/rooms/${room_id}/plants/${id}?name=${plant.name}&species=${plant.species}&colors=${plant.colors}`, data)
+    axios.put(`/api/rooms/${room_id}/plants/${id}?name=${plant.name}&species=${plant.species}`, data)
     .then( res => {
       setPlant( res.data )
     })

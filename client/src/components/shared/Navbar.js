@@ -10,35 +10,28 @@ import Logo from '../../images/logo.png';
 
 const Navbar = (props) => {
 
-  useEffect(() => {
+  // useEffect(() => {
     
-  }, [props.auth])
+  // }, [props.auth])
 
 
-  const navAuth = () => {
-    const {user, handleLogout} = props.auth;
-    if (user) {
-      return (
-      // <div>Hello {user.firstName}!
-      <Right>
-        <NavLink to='/profile'>Profile</NavLink>
-        <NavLink onClick={ () => handleLogout(props.history)} to='/'>Log Out</NavLink>
-      </Right>
-      // </div>
-      )
-    } else {
-      return (
-        <Right>
-          <NavLink to='/'>Home</NavLink>
-          <NavLink to='/login'>Log In</NavLink>
-          <NavLink to='/register'>Register</NavLink>
-        </Right>
-      )
-    } 
-  }
+  // const navAuth = () => {
+  //   const {user, handleLogout} = props.auth;
+  //   if (user) {
+  //     return (
+  //     // <div>Hello {user.firstName}!
+      
+  //     // </div>
+  //     )
+  //   } else {
+  //     return (
+        
+  //     )
+  //   } 
+  // }
 
 // if statement makes logo take you to home or profile depending on login status
-
+const {handleLogout} = props.auth;
 if ( props.auth.user === null ) {
   return (
     <Wrap>
@@ -47,7 +40,11 @@ if ( props.auth.user === null ) {
             <Img src={Logo} alt='logo' />
           </NavLink>
         </Left>
-      {navAuth()}
+        <Right>
+        <NavLink to='/'>Home</NavLink>
+        <NavLink to='/login'>Log In</NavLink>
+        <NavLink to='/register'>Register</NavLink>
+      </Right>
     </Wrap>
   )
 } else {
@@ -58,7 +55,11 @@ if ( props.auth.user === null ) {
             <Img src={Logo} alt='logo' />
           </NavLink>
         </Left>
-      {navAuth()}
+        <Right>
+          
+          <NavLink to='/profile'>Profile</NavLink>
+        <NavLink onClick={ () => handleLogout(props.history)} to='/'>Log Out</NavLink>
+        </Right>
     </Wrap>
   )
 }
