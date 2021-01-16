@@ -42,6 +42,7 @@ if ( props.auth.user === null ) {
         </Left>
         <Right>
         <NavLink to='/'>Home</NavLink>
+        <NavLink to='About'>About</NavLink>
         <NavLink to='/login'>Log In</NavLink>
         <NavLink to='/register'>Register</NavLink>
       </Right>
